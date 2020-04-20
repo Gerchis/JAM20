@@ -5,6 +5,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     /*index
+        ######################
+        #                    #
+        #  PUBLIC VARIABLES  #
+        #                    #
+        ######################
+    */
+
+    public bool playerControl;
+    public bool consumeEnergy;
+
+
+    /*index
         #########################
         #                       #
         #  GAME OPTIONS: SOUND  #
@@ -12,7 +24,7 @@ public class GameManager : MonoBehaviour
         #########################
     */
 
-    public bool playerControl;
+
 
     //Valores actuales de audio
     public float masterVolumenValueSaved;
@@ -56,6 +68,7 @@ public class GameManager : MonoBehaviour
     {
         //Habilitamos el control del personaje. Pasa a false cuando se queda sin energia y cae.
         playerControl = true;
+        consumeEnergy = false;
 
         //TESTING ZONE
         //TESTING END ZONE

@@ -17,8 +17,16 @@ public class StartTrigger : MonoBehaviour
         {
             foreach (Transform child in fishes.transform)
             {
-                //child.GetComponent<FishController>().EnableFish();
+                child.GetComponent<FishController>().EnableFish();
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            GameManager.Instance.consumeEnergy = true;
         }
     }
 }
