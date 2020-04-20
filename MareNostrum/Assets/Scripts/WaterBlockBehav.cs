@@ -35,7 +35,15 @@ public class WaterBlockBehav : MonoBehaviour
     {
         if (CheckBorders() && collision.tag == "Player")
         {
-            //Cambiar el estado del player a agua
+            collision.GetComponent<PlayerBehav>().environment = PlayerBehav.Environment.WATER;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<PlayerBehav>().environment = PlayerBehav.Environment.AIR;
         }
     }
 
