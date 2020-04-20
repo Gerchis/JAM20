@@ -17,24 +17,76 @@ public class PlayerBehav : MonoBehaviour
         DOWN_LEFT
     }
 
+    public enum Environment
+    {
+        NONE,
+        WATER,
+        AIR
+    }
+
     public float moveForce;
     public float maxVel;
+
+    private Quaternion rotationAngle;
+    public float rotationVel;
 
     public float dashForce;
     private bool isDashing;
 
     private Rigidbody2D rb;
 
+    public float airGravity;
+    public float waterGravity;
+
+    private float actualGravity;
+
     private Directions facingDirection = Directions.NONE;
+
+    public Environment environment = Environment.NONE;
     
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();   
+        rb = GetComponent<Rigidbody2D>();
     }
         
     void Update()
     {
-        if (InputManager.Instance.dashKey)
+        //!Controlador de la direccion
+        switch (facingDirection)
+        {
+            case Directions.NONE:
+                break;
+            case Directions.UP:
+                rotationAngle = Quaternion.Euler(0,0,0);
+                break;
+            case Directions.DOWN:
+                rotationAngle = Quaternion.Euler(0, 0, 180);
+                break;
+            case Directions.RIGHT:
+                rotationAngle = Quaternion.Euler(0, 0, -90);
+                break;
+            case Directions.LEFT:
+                rotationAngle = Quaternion.Euler(0, 0, 90);
+                break;
+            case Directions.UP_RIGHT:
+                rotationAngle = Quaternion.Euler(0, 0, -45);
+                break;
+            case Directions.UP_LEFT:
+                rotationAngle = Quaternion.Euler(0, 0, 45);
+                break;
+            case Directions.DOWN_RIGHT:
+                rotationAngle = Quaternion.Euler(0, 0, -135);
+                break;
+            case Directions.DOWN_LEFT:
+                rotationAngle = Quaternion.Euler(0, 0, 135);
+                break;
+        }
+
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotationAngle, rotationVel * Time.deltaTime);
+        
+
+        //!Logica del dash
+        if (InputManager.Instance.dashKey && !isDashing)
         {
             switch (facingDirection)
             {
@@ -52,13 +104,54 @@ public class PlayerBehav : MonoBehaviour
                 case Directions.LEFT:
                     rb.AddForce(Vector2.left * dashForce, ForceMode2D.Impulse);
                     break;
+                case Directions.UP_RIGHT:
+                    rb.AddForce((Vector2.up + Vector2.right) * dashForce, ForceMode2D.Impulse);
+                    break;
+                case Directions.UP_LEFT:
+                    rb.AddForce((Vector2.up + Vector2.left) * dashForce, ForceMode2D.Impulse);
+                    break;
+                case Directions.DOWN_RIGHT:
+                    rb.AddForce((Vector2.down + Vector2.right) * dashForce, ForceMode2D.Impulse);
+                    break;
+                case Directions.DOWN_LEFT:
+                    rb.AddForce((Vector2.down + Vector2.left) * dashForce, ForceMode2D.Impulse);
+                    break;
             }
             isDashing = true;
+
+            InputManager.Instance.dashKey = false;
         }
     }
 
     private void FixedUpdate()
     {
+        //!Control de entorno
+        switch (environment)
+        {
+            case Environment.NONE:
+                break;
+            case Environment.WATER:
+                rb.AddForce(Vector2.down * waterGravity, ForceMode2D.Force);
+                break;
+            case Environment.AIR:
+                rb.AddForce(Vector2.down * airGravity, ForceMode2D.Force);
+
+                if (isDashing)
+                {
+                    if (InputManager.Instance.rightKey && !InputManager.Instance.leftKey)
+                    {
+                        rb.AddForce(Vector2.right * moveForce, ForceMode2D.Force);
+                        facingDirection = Directions.RIGHT;
+                    }
+                    else if (InputManager.Instance.leftKey && !InputManager.Instance.rightKey)
+                    {
+                        rb.AddForce(Vector2.left * moveForce, ForceMode2D.Force);
+                        facingDirection = Directions.LEFT;
+                    }
+                }
+                break;
+        }
+
         if (!isDashing)
         {
             //!Controladores de Inputs
@@ -85,23 +178,22 @@ public class PlayerBehav : MonoBehaviour
             }
 
             //!Ejes diagonales para el dash
-            if (InputManager.Instance.rightKey && InputManager.Instance.upKey)
+            if (InputManager.Instance.rightKey && InputManager.Instance.upKey && facingDirection != Directions.UP_RIGHT)
             {
                 facingDirection = Directions.UP_RIGHT;
             }
-            else if (InputManager.Instance.leftKey && InputManager.Instance.upKey)
+            else if (InputManager.Instance.leftKey && InputManager.Instance.upKey && facingDirection != Directions.UP_LEFT)
             {
                 facingDirection = Directions.UP_LEFT;
             }
-            else if (InputManager.Instance.rightKey && InputManager.Instance.downKey)
-            {
-                facingDirection = Directions.DOWN_LEFT;
-            }
-            else if (InputManager.Instance.leftKey && InputManager.Instance.downKey)
+            else if (InputManager.Instance.rightKey && InputManager.Instance.downKey && facingDirection != Directions.DOWN_RIGHT)
             {
                 facingDirection = Directions.DOWN_RIGHT;
             }
-
+            else if (InputManager.Instance.leftKey && InputManager.Instance.downKey && facingDirection != Directions.DOWN_LEFT)
+            {
+                facingDirection = Directions.DOWN_LEFT;
+            }
 
             //!Controladores de velocidad
             if (rb.velocity.x > maxVel)
@@ -122,7 +214,7 @@ public class PlayerBehav : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, -maxVel);
             }
         }
-        else if (rb.velocity.x < maxVel && rb.velocity.x > -maxVel && rb.velocity.y < maxVel && rb.velocity.y > -maxVel)
+        else if (rb.velocity.x < maxVel && rb.velocity.x > -maxVel && rb.velocity.y < maxVel && rb.velocity.y > -maxVel && environment == Environment.WATER)
         {
             isDashing = false;
         }

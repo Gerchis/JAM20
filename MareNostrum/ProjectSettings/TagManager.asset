@@ -6,6 +6,8 @@ TagManager:
   tags:
   - WaterBlock
   - Block
+  - Fish
+  - Seagull
   layers:
   - Default
   - TransparentFX
