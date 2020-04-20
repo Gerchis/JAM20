@@ -34,6 +34,13 @@ public class FishController : MonoBehaviour
         isActive = true;
     }
 
+    public void DisableFish()
+    {
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<BoxCollider2D>().enabled = false;
+        isActive = false;
+    }
+
     private void FixedUpdate()
     {
         if (isActive)
@@ -60,9 +67,8 @@ public class FishController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GetComponent<SpriteRenderer>().enabled = false;
-            GetComponent<BoxCollider2D>().enabled = false;
-            isActive = false;
+            SoundManager.Instance.PlaySound("Chew1");
+            DisableFish();
         }
     }
 }
