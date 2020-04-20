@@ -93,6 +93,8 @@ public class PlayerBehav : MonoBehaviour
         //!Logica del dash
         if (InputManager.Instance.dashKey && !isDashing)
         {
+            SoundManager.Instance.PlayRandomSound("WaterDash");
+
             switch (facingDirection)
             {
                 case Directions.NONE:

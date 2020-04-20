@@ -31,6 +31,14 @@ public class WaterBlockBehav : MonoBehaviour
         return true;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            SoundManager.Instance.PlaySound("WaterSplash1");
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (CheckBorders() && collision.tag == "Player")
