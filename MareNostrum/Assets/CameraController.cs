@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    Rigidbody2D rb;
-    private bool isColliding;
+    public GameObject player;
+    private Rigidbody2D rb;
+    public Rigidbody2D rbp;
+    public Collider2D a;
+    private float playerX;
+    private float playerY;
+    private float cameraX;
+    private float cameraY;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<SpriteRenderer>().enabled = false;
-        rb = GetComponentInParent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
+        rbp = player.GetComponent<Rigidbody2D>();
+        playerX = player.GetComponent<Transform>().position.x;
+        playerY = player.GetComponent<Transform>().position.y;
+        cameraX = GetComponent<Transform>().position.x;
+        cameraY = GetComponent<Transform>().position.y;
     }
 
     // Update is called once per frame
@@ -19,18 +29,27 @@ public class CameraController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void FixedUpdate()
     {
-        if (collision.tag == "Player")
-        {
-            rb.velocity = collision.GetComponent<Rigidbody2D>().velocity;
+        if (playerX > cameraX+2)
+        {         
+            rb.velocity = rbp.velocity;
         }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
+        if (playerX > cameraX - 2)
         {
-            rb.velocity = new Vector2 (0,0);
+            rb.velocity = rbp.velocity;
+        }
+        if (playerY > cameraY + 1)
+        {
+            rb.velocity = rbp.velocity;
+        }
+        if (playerY > cameraY - 3.5)
+        {
+            rb.velocity = rbp.velocity;
+        }
+        else
+        {
+            rb.velocity = rbp.velocity;
         }
     }
 
