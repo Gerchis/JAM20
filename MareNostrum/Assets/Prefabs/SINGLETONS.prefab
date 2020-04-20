@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7827528886398184631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4577710010992723032}
+  - component: {fileID: 4575498095507321167}
+  - component: {fileID: 5846129730477213287}
+  - component: {fileID: 3835849107379508507}
+  m_Layer: 0
+  m_Name: SINGLETONS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4577710010992723032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827528886398184631}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.48, y: 1.52, z: -0.058356233}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4575498095507321167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827528886398184631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e616b48173b8542a46c25e268cb3de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerControl: 0
+  consumeEnergy: 0
+  masterVolumenValueSaved: 0.5
+  musicVolumenValueSaved: 0.5
+  effectsVolumenValueSaved: 0.5
+--- !u!114 &5846129730477213287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827528886398184631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99483bdc07843e645ad3bbd4f5cea3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upKey: 0
+  downKey: 0
+  rightKey: 0
+  leftKey: 0
+  dashKey: 0
+--- !u!114 &3835849107379508507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827528886398184631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f0ba78c1b8430349a70d038ce3fd3e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Seagull1
+    clip: {fileID: 8300000, guid: 8060aad43efecc34c8166e8b6ce018c7, type: 3}
+    normalizedValue: 0
+    type: 0
+    pitch: 1
+    randomPitch: 0.2
+  - name: Seagull2
+    clip: {fileID: 8300000, guid: 8ea464757207cb841a1d6bdb3d6479d4, type: 3}
+    normalizedValue: 0
+    type: 0
+    pitch: 1
+    randomPitch: 0.2
+  - name: Seagull3
+    clip: {fileID: 8300000, guid: b22edd742f3129e4dafe80dc56e02032, type: 3}
+    normalizedValue: 0
+    type: 0
+    pitch: 1
+    randomPitch: 0.2
+  musics: []
