@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
+- path: Assets/Scenes/Sergio.unity
+=======
 - path: Assets/Scenes/Marc.unity
+>>>>>>> 4e621c55b2870a24ca4616528cd6fde1eebc3a5f
   isLoaded: 1
   isActive: 1

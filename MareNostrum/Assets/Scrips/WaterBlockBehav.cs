@@ -10,7 +10,8 @@ public class WaterBlockBehav : MonoBehaviour
         UP,
         DOWN,
         RIGHT,
-        LEFT
+        LEFT,
+        WHIRLWIND
     }
 
     public WaterDirection direction = WaterDirection.NONE;
@@ -32,7 +33,7 @@ public class WaterBlockBehav : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (CheckBorders())
+        if (CheckBorders() && collision.tag == "Player")
         {
             //Cambiar el estado del player a agua
         }
