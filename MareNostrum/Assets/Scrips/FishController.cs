@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class FishController : MonoBehaviour
 {
+    public float timer = 2.0f;
+    public float positiveTimer;
+    private float negativeTimer;
+    public Rigidbody2D rb;
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
+        positiveTimer = timer;
+        negativeTimer = -timer;
+        rb = GetComponent<Rigidbody2D>();
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<BoxCollider2D>().enabled = true;
         GetComponent<FishController>().enabled = true;
@@ -16,6 +25,21 @@ public class FishController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void FixedUpdate()
+    {
+        timer -= Time.deltaTime;
+
+        if (timer <= 0.0f)
+        {
+            rb.AddForce(transform.right*speed);
+        }
+        else if (timer <= negativeTimer)
+        {
+            rb.AddForce(transform.right * -speed);
+            timer = positiveTimer;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
