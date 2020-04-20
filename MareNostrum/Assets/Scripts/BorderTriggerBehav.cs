@@ -18,7 +18,7 @@ public class BorderTriggerBehav : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            col = true;
+            col = false;
         }
     }
 }
