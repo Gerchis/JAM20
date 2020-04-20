@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class FishController : MonoBehaviour
 {
-    public float timer = 2.0f;
-    public float positiveTimer;
+    public float timer = 0.5f;
+    private float positiveTimer;
     private float negativeTimer;
     public Rigidbody2D rb;
     public float speed;
+    private bool direction = true;
+    private bool isActive;
 
     // Start is called before the first frame update
     void Start()
@@ -16,9 +18,7 @@ public class FishController : MonoBehaviour
         positiveTimer = timer;
         negativeTimer = -timer;
         rb = GetComponent<Rigidbody2D>();
-        GetComponent<SpriteRenderer>().enabled = true;
-        GetComponent<BoxCollider2D>().enabled = true;
-        GetComponent<FishController>().enabled = true;
+        EnableFish();
     }
 
     // Update is called once per frame
@@ -27,18 +27,32 @@ public class FishController : MonoBehaviour
         
     }
 
+    public void EnableFish()
+    {
+        GetComponent<SpriteRenderer>().enabled = true;
+        GetComponent<BoxCollider2D>().enabled = true;
+        isActive = true;
+    }
+
     private void FixedUpdate()
     {
-        timer -= Time.deltaTime;
+        if (isActive)
+        {
+            timer -= Time.deltaTime;
 
-        if (timer <= 0.0f)
-        {
-            rb.AddForce(transform.right*speed);
-        }
-        else if (timer <= negativeTimer)
-        {
-            rb.AddForce(transform.right * -speed);
-            timer = positiveTimer;
+            if (timer <= negativeTimer && direction == false)
+            {
+                Debug.Log("Izquierda");
+                rb.AddForce(Vector2.right * -speed, ForceMode2D.Force);
+                timer = positiveTimer;
+                direction = true;
+            }
+            else if (timer <= 0.0f && direction == true)
+            {
+                Debug.Log("Derecha");
+                rb.AddForce(Vector2.right * speed, ForceMode2D.Force);
+                direction = false;
+            }
         }
     }
 
@@ -48,7 +62,7 @@ public class FishController : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
-            GetComponent<FishController>().enabled = false;
+            isActive = false;
         }
     }
 }

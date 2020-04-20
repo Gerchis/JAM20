@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VictoryTrigger : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class VictoryTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             //TODO: Activar pantalla victoria
+
+            SceneManager.LoadScene(1);
         }
     }
 }
