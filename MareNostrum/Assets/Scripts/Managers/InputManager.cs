@@ -68,7 +68,7 @@ public class InputManager : MonoBehaviour
         {
             dashKey = true;
         }
-        else
+        else if (Input.GetKeyUp(KeyCode.Space))
         {
             dashKey = false;
         }
