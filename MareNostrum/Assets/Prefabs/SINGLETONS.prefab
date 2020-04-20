@@ -47,9 +47,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControl: 0
   consumeEnergy: 0
-  masterVolumenValueSaved: 0.5
-  musicVolumenValueSaved: 0.5
-  effectsVolumenValueSaved: 0.5
+  masterVolumenValueSaved: 1
+  musicVolumenValueSaved: 0.75
+  effectsVolumenValueSaved: 0.75
 --- !u!114 &5846129730477213287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   upKey: 0
   downKey: 0
   rightKey: 0
-  leftKey: 0
+  leftKey: 1
   dashKey: 0
 --- !u!114 &3835849107379508507
 MonoBehaviour:
@@ -98,4 +98,40 @@ MonoBehaviour:
     type: 0
     pitch: 1
     randomPitch: 0.2
-  musics: []
+  - name: WaterDash1
+    clip: {fileID: 8300000, guid: f102525aa0147be408f56c406ffe60ab, type: 3}
+    normalizedValue: 0
+    type: 0
+    pitch: 1.5
+    randomPitch: 0.15
+  - name: WaterDash2
+    clip: {fileID: 8300000, guid: cbdefbe96807b2944849296d72c0ff44, type: 3}
+    normalizedValue: 0
+    type: 0
+    pitch: 1.5
+    randomPitch: 0.15
+  - name: Chew1
+    clip: {fileID: 8300000, guid: bd0821f5cf4af1f4488fcaded2e20d38, type: 3}
+    normalizedValue: 0
+    type: 0
+    pitch: 1.5
+    randomPitch: 0.2
+  - name: WaterSplash1
+    clip: {fileID: 8300000, guid: 7111dc552a96f074e89fa1d0717b494f, type: 3}
+    normalizedValue: 0.25
+    type: 0
+    pitch: 1.5
+    randomPitch: 0.2
+  musics:
+  - name: Menu
+    clip: {fileID: 0}
+    normalizedValue: 0
+    type: 1
+    pitch: 1
+    randomPitch: 0
+  - name: Ingame
+    clip: {fileID: 8300000, guid: 0f969002a26e5c34d93138bd95ebf537, type: 3}
+    normalizedValue: -0.5
+    type: 1
+    pitch: 1
+    randomPitch: 0
