@@ -18,6 +18,8 @@ public class WaterBlockBehav : MonoBehaviour
 
     public BorderTriggerBehav[] borders;
 
+    public GameObject splash;
+
     private bool CheckBorders()
     {
         for (int i = 0; i < borders.Length; i++)
@@ -29,6 +31,37 @@ public class WaterBlockBehav : MonoBehaviour
         }
 
         return true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            Vector3 contactVector = transform.position - collision.transform.position;
+            Quaternion splashRotation = Quaternion.Euler(0,0,0);
+
+            if (Mathf.Abs(contactVector.y) > Mathf.Abs(contactVector.x) && contactVector.y > 0)
+            {
+                splashRotation = Quaternion.Euler(0, 0, 0);              
+            }
+            else if (Mathf.Abs(contactVector.y) > Mathf.Abs(contactVector.x) && contactVector.y < 0)
+            {
+                splashRotation = Quaternion.Euler(0, 0, 180);
+            }
+            else if (Mathf.Abs(contactVector.y) < Mathf.Abs(contactVector.x) && contactVector.x > 0)
+            {
+                splashRotation = Quaternion.Euler(0, 0, -90);
+            }
+            else if (Mathf.Abs(contactVector.y) < Mathf.Abs(contactVector.x) && contactVector.x < 0)
+            {
+                splashRotation = Quaternion.Euler(0, 0, 90);
+            }
+
+            splash.transform.rotation = splashRotation;
+            splash.transform.position = collision.transform.position;
+
+
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -56,5 +89,4 @@ public class WaterBlockBehav : MonoBehaviour
             player.waterType = WaterDirection.NONE;
         }
     }
-
 }

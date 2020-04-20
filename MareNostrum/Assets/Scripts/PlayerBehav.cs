@@ -56,194 +56,199 @@ public class PlayerBehav : MonoBehaviour
         
     void Update()
     {
-        //!Controlador de la direccion
-        switch (facingDirection)
+        if (GameManager.Instance.playerControl)
         {
-            case Directions.NONE:
-                break;
-            case Directions.UP:
-                rotationAngle = Quaternion.Euler(0,0,0);
-                break;
-            case Directions.DOWN:
-                rotationAngle = Quaternion.Euler(0, 0, 180);
-                break;
-            case Directions.RIGHT:
-                rotationAngle = Quaternion.Euler(0, 0, -90);
-                break;
-            case Directions.LEFT:
-                rotationAngle = Quaternion.Euler(0, 0, 90);
-                break;
-            case Directions.UP_RIGHT:
-                rotationAngle = Quaternion.Euler(0, 0, -45);
-                break;
-            case Directions.UP_LEFT:
-                rotationAngle = Quaternion.Euler(0, 0, 45);
-                break;
-            case Directions.DOWN_RIGHT:
-                rotationAngle = Quaternion.Euler(0, 0, -135);
-                break;
-            case Directions.DOWN_LEFT:
-                rotationAngle = Quaternion.Euler(0, 0, 135);
-                break;
-        }
-
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotationAngle, rotationVel * Time.deltaTime);
-        
-
-        //!Logica del dash
-        if (InputManager.Instance.dashKey && !isDashing)
-        {
+            //!Controlador de la direccion
             switch (facingDirection)
             {
                 case Directions.NONE:
                     break;
                 case Directions.UP:
-                    rb.AddForce(Vector2.up * dashForce, ForceMode2D.Impulse);
+                    rotationAngle = Quaternion.Euler(0, 0, 0);
                     break;
                 case Directions.DOWN:
-                    rb.AddForce(Vector2.down * dashForce, ForceMode2D.Impulse);
+                    rotationAngle = Quaternion.Euler(0, 0, 180);
                     break;
                 case Directions.RIGHT:
-                    rb.AddForce(Vector2.right * dashForce, ForceMode2D.Impulse);
+                    rotationAngle = Quaternion.Euler(0, 0, -90);
                     break;
                 case Directions.LEFT:
-                    rb.AddForce(Vector2.left * dashForce, ForceMode2D.Impulse);
+                    rotationAngle = Quaternion.Euler(0, 0, 90);
                     break;
                 case Directions.UP_RIGHT:
-                    rb.AddForce((Vector2.up + Vector2.right) * dashForce, ForceMode2D.Impulse);
+                    rotationAngle = Quaternion.Euler(0, 0, -45);
                     break;
                 case Directions.UP_LEFT:
-                    rb.AddForce((Vector2.up + Vector2.left) * dashForce, ForceMode2D.Impulse);
+                    rotationAngle = Quaternion.Euler(0, 0, 45);
                     break;
                 case Directions.DOWN_RIGHT:
-                    rb.AddForce((Vector2.down + Vector2.right) * dashForce, ForceMode2D.Impulse);
+                    rotationAngle = Quaternion.Euler(0, 0, -135);
                     break;
                 case Directions.DOWN_LEFT:
-                    rb.AddForce((Vector2.down + Vector2.left) * dashForce, ForceMode2D.Impulse);
+                    rotationAngle = Quaternion.Euler(0, 0, 135);
                     break;
             }
-            isDashing = true;
 
-            InputManager.Instance.dashKey = false;
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotationAngle, rotationVel * Time.deltaTime);
+
+            //!Logica del dash
+            if (InputManager.Instance.dashKey && !isDashing)
+            {
+                switch (facingDirection)
+                {
+                    case Directions.NONE:
+                        break;
+                    case Directions.UP:
+                        rb.AddForce(Vector2.up * dashForce, ForceMode2D.Impulse);
+                        break;
+                    case Directions.DOWN:
+                        rb.AddForce(Vector2.down * dashForce, ForceMode2D.Impulse);
+                        break;
+                    case Directions.RIGHT:
+                        rb.AddForce(Vector2.right * dashForce, ForceMode2D.Impulse);
+                        break;
+                    case Directions.LEFT:
+                        rb.AddForce(Vector2.left * dashForce, ForceMode2D.Impulse);
+                        break;
+                    case Directions.UP_RIGHT:
+                        rb.AddForce((Vector2.up + Vector2.right) * dashForce, ForceMode2D.Impulse);
+                        break;
+                    case Directions.UP_LEFT:
+                        rb.AddForce((Vector2.up + Vector2.left) * dashForce, ForceMode2D.Impulse);
+                        break;
+                    case Directions.DOWN_RIGHT:
+                        rb.AddForce((Vector2.down + Vector2.right) * dashForce, ForceMode2D.Impulse);
+                        break;
+                    case Directions.DOWN_LEFT:
+                        rb.AddForce((Vector2.down + Vector2.left) * dashForce, ForceMode2D.Impulse);
+                        break;
+                }
+                isDashing = true;
+
+                InputManager.Instance.dashKey = false;
+            } 
         }
     }
 
     private void FixedUpdate()
     {
-        //!Control de entorno
-        switch (environment)
+        if (GameManager.Instance.playerControl)
         {
-            case Environment.NONE:
-                break;
-            case Environment.WATER:
-                rb.AddForce(Vector2.down * waterGravity, ForceMode2D.Force);
+            //!Control de entorno
+            switch (environment)
+            {
+                case Environment.NONE:
+                    break;
+                case Environment.WATER:
+                    rb.AddForce(Vector2.down * waterGravity, ForceMode2D.Force);
 
-                switch (waterType)
-                {
-                    case WaterBlockBehav.WaterDirection.NONE:
-                        break;
-                    case WaterBlockBehav.WaterDirection.UP:
-                        rb.AddForce(Vector2.up * streamForce, ForceMode2D.Impulse);
-                        break;
-                    case WaterBlockBehav.WaterDirection.DOWN:
-                        rb.AddForce(Vector2.down * streamForce, ForceMode2D.Impulse);
-                        break;
-                    case WaterBlockBehav.WaterDirection.RIGHT:
-                        rb.AddForce(Vector2.right * streamForce, ForceMode2D.Impulse);
-                        break;
-                    case WaterBlockBehav.WaterDirection.LEFT:
-                        rb.AddForce(Vector2.left * streamForce, ForceMode2D.Impulse);
-                        break;
-                    case WaterBlockBehav.WaterDirection.WHIRLWIND:
-                        Vector3 whirwindDirection = (centerWater - transform.position).normalized;
-                        rb.AddForce(whirwindDirection * whirlwindForce, ForceMode2D.Force);
-                        break;
-                }
-                break;
-            case Environment.AIR:
-                rb.AddForce(Vector2.down * airGravity, ForceMode2D.Force);
-
-                if (isDashing)
-                {
-                    if (InputManager.Instance.rightKey && !InputManager.Instance.leftKey)
+                    switch (waterType)
                     {
-                        rb.AddForce(Vector2.right * moveForce, ForceMode2D.Force);
-                        facingDirection = Directions.RIGHT;
+                        case WaterBlockBehav.WaterDirection.NONE:
+                            break;
+                        case WaterBlockBehav.WaterDirection.UP:
+                            rb.AddForce(Vector2.up * streamForce, ForceMode2D.Impulse);
+                            break;
+                        case WaterBlockBehav.WaterDirection.DOWN:
+                            rb.AddForce(Vector2.down * streamForce, ForceMode2D.Impulse);
+                            break;
+                        case WaterBlockBehav.WaterDirection.RIGHT:
+                            rb.AddForce(Vector2.right * streamForce, ForceMode2D.Impulse);
+                            break;
+                        case WaterBlockBehav.WaterDirection.LEFT:
+                            rb.AddForce(Vector2.left * streamForce, ForceMode2D.Impulse);
+                            break;
+                        case WaterBlockBehav.WaterDirection.WHIRLWIND:
+                            Vector3 whirwindDirection = (centerWater - transform.position).normalized;
+                            rb.AddForce(whirwindDirection * whirlwindForce, ForceMode2D.Force);
+                            break;
                     }
-                    else if (InputManager.Instance.leftKey && !InputManager.Instance.rightKey)
+                    break;
+                case Environment.AIR:
+                    rb.AddForce(Vector2.down * airGravity, ForceMode2D.Force);
+
+                    if (isDashing)
                     {
-                        rb.AddForce(Vector2.left * moveForce, ForceMode2D.Force);
-                        facingDirection = Directions.LEFT;
+                        if (InputManager.Instance.rightKey && !InputManager.Instance.leftKey)
+                        {
+                            rb.AddForce(Vector2.right * moveForce, ForceMode2D.Force);
+                            facingDirection = Directions.RIGHT;
+                        }
+                        else if (InputManager.Instance.leftKey && !InputManager.Instance.rightKey)
+                        {
+                            rb.AddForce(Vector2.left * moveForce, ForceMode2D.Force);
+                            facingDirection = Directions.LEFT;
+                        }
                     }
+                    break;
+            }
+
+            if (!isDashing)
+            {
+                //!Controladores de Inputs
+                if (InputManager.Instance.upKey)
+                {
+                    rb.AddForce(Vector2.up * moveForce, ForceMode2D.Force);
+                    facingDirection = Directions.UP;
                 }
-                break;
-        }
+                else if (InputManager.Instance.downKey)
+                {
+                    rb.AddForce(Vector2.down * moveForce, ForceMode2D.Force);
+                    facingDirection = Directions.DOWN;
+                }
 
-        if (!isDashing)
-        {
-            //!Controladores de Inputs
-            if (InputManager.Instance.upKey)
-            {
-                rb.AddForce(Vector2.up * moveForce, ForceMode2D.Force);
-                facingDirection = Directions.UP;
-            }
-            else if (InputManager.Instance.downKey)
-            {
-                rb.AddForce(Vector2.down * moveForce, ForceMode2D.Force);
-                facingDirection = Directions.DOWN;
-            }
+                if (InputManager.Instance.rightKey && !InputManager.Instance.leftKey)
+                {
+                    rb.AddForce(Vector2.right * moveForce, ForceMode2D.Force);
+                    facingDirection = Directions.RIGHT;
+                }
+                else if (InputManager.Instance.leftKey && !InputManager.Instance.rightKey)
+                {
+                    rb.AddForce(Vector2.left * moveForce, ForceMode2D.Force);
+                    facingDirection = Directions.LEFT;
+                }
 
-            if (InputManager.Instance.rightKey && !InputManager.Instance.leftKey)
-            {
-                rb.AddForce(Vector2.right * moveForce, ForceMode2D.Force);
-                facingDirection = Directions.RIGHT;
-            }
-            else if (InputManager.Instance.leftKey && !InputManager.Instance.rightKey)
-            {
-                rb.AddForce(Vector2.left * moveForce, ForceMode2D.Force);
-                facingDirection = Directions.LEFT;
-            }
+                //!Ejes diagonales para el dash
+                if (InputManager.Instance.rightKey && InputManager.Instance.upKey && facingDirection != Directions.UP_RIGHT)
+                {
+                    facingDirection = Directions.UP_RIGHT;
+                }
+                else if (InputManager.Instance.leftKey && InputManager.Instance.upKey && facingDirection != Directions.UP_LEFT)
+                {
+                    facingDirection = Directions.UP_LEFT;
+                }
+                else if (InputManager.Instance.rightKey && InputManager.Instance.downKey && facingDirection != Directions.DOWN_RIGHT)
+                {
+                    facingDirection = Directions.DOWN_RIGHT;
+                }
+                else if (InputManager.Instance.leftKey && InputManager.Instance.downKey && facingDirection != Directions.DOWN_LEFT)
+                {
+                    facingDirection = Directions.DOWN_LEFT;
+                }
 
-            //!Ejes diagonales para el dash
-            if (InputManager.Instance.rightKey && InputManager.Instance.upKey && facingDirection != Directions.UP_RIGHT)
-            {
-                facingDirection = Directions.UP_RIGHT;
-            }
-            else if (InputManager.Instance.leftKey && InputManager.Instance.upKey && facingDirection != Directions.UP_LEFT)
-            {
-                facingDirection = Directions.UP_LEFT;
-            }
-            else if (InputManager.Instance.rightKey && InputManager.Instance.downKey && facingDirection != Directions.DOWN_RIGHT)
-            {
-                facingDirection = Directions.DOWN_RIGHT;
-            }
-            else if (InputManager.Instance.leftKey && InputManager.Instance.downKey && facingDirection != Directions.DOWN_LEFT)
-            {
-                facingDirection = Directions.DOWN_LEFT;
-            }
+                //!Controladores de velocidad
+                if (rb.velocity.x > maxVel)
+                {
+                    rb.velocity = new Vector2(maxVel, rb.velocity.y);
+                }
+                else if (rb.velocity.x < -maxVel)
+                {
+                    rb.velocity = new Vector2(-maxVel, rb.velocity.y);
+                }
 
-            //!Controladores de velocidad
-            if (rb.velocity.x > maxVel)
-            {
-                rb.velocity = new Vector2(maxVel, rb.velocity.y);
+                if (rb.velocity.y > maxVel)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, maxVel);
+                }
+                else if (rb.velocity.y < -maxVel)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, -maxVel);
+                }
             }
-            else if (rb.velocity.x < -maxVel)
+            else if (rb.velocity.x < maxVel && rb.velocity.x > -maxVel && rb.velocity.y < maxVel && rb.velocity.y > -maxVel && environment == Environment.WATER)
             {
-                rb.velocity = new Vector2(-maxVel, rb.velocity.y);
+                isDashing = false;
             }
-
-            if (rb.velocity.y > maxVel)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, maxVel);
-            }
-            else if (rb.velocity.y < -maxVel)
-            {
-                rb.velocity = new Vector2(rb.velocity.x, -maxVel);
-            }
-        }
-        else if (rb.velocity.x < maxVel && rb.velocity.x > -maxVel && rb.velocity.y < maxVel && rb.velocity.y > -maxVel && environment == Environment.WATER)
-        {
-            isDashing = false;
-        }
+        } 
     }
 }
