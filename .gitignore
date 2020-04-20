@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+MareNostrum/Library
+MareNostrum/Temp
+MareNostrum/obj
