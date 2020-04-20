@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishController : MonoBehaviour
+public class SeagullAutoController : MonoBehaviour
 {
     public float timer = 0.5f;
     private float positiveTimer;
@@ -12,26 +12,33 @@ public class FishController : MonoBehaviour
     private bool direction = true;
     private bool isActive;
 
+    public enum SEAGULLTYPE
+    {
+        NONE,
+
+    }
+    
+
     // Start is called before the first frame update
     void Start()
     {
         positiveTimer = timer;
         negativeTimer = -timer;
         rb = GetComponent<Rigidbody2D>();
-        EnableFish();
+        EnableSeagull();
+    }
+
+    public void EnableSeagull()
+    {
+        GetComponent<SpriteRenderer>().enabled = true;
+        GetComponent<BoxCollider2D>().enabled = true;
+        isActive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    public void EnableFish()
-    {
-        GetComponent<SpriteRenderer>().enabled = true;
-        GetComponent<BoxCollider2D>().enabled = true;
-        isActive = true;
     }
 
     private void FixedUpdate()
@@ -43,7 +50,7 @@ public class FishController : MonoBehaviour
             if (timer <= negativeTimer && direction == false)
             {
                 Debug.Log("Izquierda");
-                rb.velocity = new Vector2  (-speed, 0);
+                rb.velocity = new Vector2(-speed, 0);
                 timer = positiveTimer;
                 direction = true;
             }
@@ -53,16 +60,6 @@ public class FishController : MonoBehaviour
                 rb.velocity = new Vector2(+speed, 0);
                 direction = false;
             }
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            GetComponent<SpriteRenderer>().enabled = false;
-            GetComponent<BoxCollider2D>().enabled = false;
-            isActive = false;
         }
     }
 }
