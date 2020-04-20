@@ -38,7 +38,12 @@ public class PlayerBehav : MonoBehaviour
     public float airGravity;
     public float waterGravity;
 
-    private float actualGravity;
+    public float streamForce;
+    public float whirlwindForce;
+
+    public Vector3 centerWater;
+
+    public WaterBlockBehav.WaterDirection waterType = WaterBlockBehav.WaterDirection.NONE;
 
     private Directions facingDirection = Directions.NONE;
 
@@ -132,6 +137,28 @@ public class PlayerBehav : MonoBehaviour
                 break;
             case Environment.WATER:
                 rb.AddForce(Vector2.down * waterGravity, ForceMode2D.Force);
+
+                switch (waterType)
+                {
+                    case WaterBlockBehav.WaterDirection.NONE:
+                        break;
+                    case WaterBlockBehav.WaterDirection.UP:
+                        rb.AddForce(Vector2.up * streamForce, ForceMode2D.Impulse);
+                        break;
+                    case WaterBlockBehav.WaterDirection.DOWN:
+                        rb.AddForce(Vector2.down * streamForce, ForceMode2D.Impulse);
+                        break;
+                    case WaterBlockBehav.WaterDirection.RIGHT:
+                        rb.AddForce(Vector2.right * streamForce, ForceMode2D.Impulse);
+                        break;
+                    case WaterBlockBehav.WaterDirection.LEFT:
+                        rb.AddForce(Vector2.left * streamForce, ForceMode2D.Impulse);
+                        break;
+                    case WaterBlockBehav.WaterDirection.WHIRLWIND:
+                        Vector3 whirwindDirection = (centerWater - transform.position).normalized;
+                        rb.AddForce(whirwindDirection * whirlwindForce, ForceMode2D.Force);
+                        break;
+                }
                 break;
             case Environment.AIR:
                 rb.AddForce(Vector2.down * airGravity, ForceMode2D.Force);
