@@ -23,7 +23,7 @@ public class VictoryTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             //TODO: Activar pantalla victoria
-
+            
             SceneManager.LoadScene(1);
         }
     }
