@@ -21,6 +21,12 @@ public class SeagullAutoController : MonoBehaviour
     private float actualDelay;
     public float delayRate;
 
+    public SpriteRenderer spr;
+    public Animator animator;
+    private int keySeagullNormal;
+    private int keySeagullAviator;
+    private int keySeagullAstronaut;
+
 
     public enum SeagullType
     {
@@ -43,6 +49,16 @@ public class SeagullAutoController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        //Animaciones
+        animator = GetComponent<Animator>();
+        keySeagullAstronaut = Animator.StringToHash("isAstronaut");
+        keySeagullAstronaut = Animator.StringToHash("isAviator");
+        keySeagullNormal = Animator.StringToHash("isNormal");
+            
+
+        //Comportamiento
+
         rb = GetComponent<Rigidbody2D>();
         EnableSeagull();
 
@@ -68,13 +84,13 @@ public class SeagullAutoController : MonoBehaviour
             case SeagullType.NONE:
                 break;
             case SeagullType.NORMAL:
-                //TODO: cargar sprite
+                animator.SetBool(keySeagullNormal, true);
                 break;
             case SeagullType.AVIATOR:
-                //TODO: cargar sprite
+                animator.SetBool(keySeagullAviator, true);
                 break;
             case SeagullType.ASTRONAUT:
-                //TODO: cargar sprite
+                animator.SetBool(keySeagullAstronaut, true);
                 break;
             default:
                 break;
@@ -121,6 +137,7 @@ public class SeagullAutoController : MonoBehaviour
         if (timer <= negativeTimer && goingRight == false)
         {
             Debug.Log("Izquierda");
+            spr.flipX = false;
             rb.velocity = new Vector2(-speed, 0);
             timer = positiveTimer;
             goingRight = true;
@@ -128,6 +145,7 @@ public class SeagullAutoController : MonoBehaviour
         else if (timer <= 0.0f && goingRight == true)
         {
             Debug.Log("Derecha");
+            spr.flipX = true;
             rb.velocity = new Vector2(+speed, 0);
             goingRight = false;
         }
@@ -199,7 +217,7 @@ public class SeagullAutoController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-
+            SoundManager.Instance.PlayRandomSound("Seagull");
         }
     }
 }

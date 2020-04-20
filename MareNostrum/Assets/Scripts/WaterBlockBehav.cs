@@ -36,7 +36,8 @@ public class WaterBlockBehav : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
-        {
+        {        
+        	SoundManager.Instance.PlaySound("WaterSplash1");
             Vector3 contactVector = transform.position - collision.transform.position;
             Quaternion splashRotation = Quaternion.Euler(0,0,0);
 

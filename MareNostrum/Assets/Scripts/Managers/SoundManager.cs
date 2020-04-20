@@ -22,6 +22,7 @@ public class Audios
     [Range(0.5f, 1.5f)]
     public float pitch = 1f;
 
+    //Random pitch + 2 o 3 clips de audio de un mismo efecto = evitamos que un sound effect sea repetitivo
     [Range(0f, 0.5f)]
     public float randomPitch = 0.2f;
 
@@ -42,25 +43,28 @@ public class Audios
 
     public void Play()
     {
+             
+        
         //Seteamos volumen del sonido
-        source.volume = GameManager.Instance.masterVolumenValueSaved;
-
+        source.volume = GameManager.Instance.masterVolumenValueSaved + normalizedValue;
+        Debug.Log("volume master: " + GameManager.Instance.masterVolumenValueSaved);
+        Debug.Log("volume normalized: " + normalizedValue);
+        Debug.Log("volume after maste/normalized: " + source.volume);
         switch (type)
         {
             case Type.EFFECT:
-                source.volume *= GameManager.Instance.effectsVolumenValueSaved;
+                source.volume *= GameManager.Instance.effectsVolumenValueSaved + normalizedValue;
             break;
             case Type.MUSIC:
-                source.volume *= GameManager.Instance.musicVolumenValueSaved;
+                source.volume *= GameManager.Instance.musicVolumenValueSaved + normalizedValue;
             break;
             default:
-                source.volume *= GameManager.Instance.masterVolumenValueSaved;
+                source.volume *= GameManager.Instance.masterVolumenValueSaved + normalizedValue;
             break;
         }
+        
+        Debug.Log("volume post options: " + source.volume);
 
-        //Normalizamos el audio mediante una variable propia del clip. 0 == no necesita normalizar.
-        //Esto lo usamos para nivelar audios.
-        if (normalizedValue != 0) { source.volume *= normalizedValue; }
 
         //Si randomPitch=0, pitch queda sin modificar
         source.pitch = pitch * (1 + Random.Range(-randomPitch / 2f, randomPitch / 2f));
@@ -120,6 +124,9 @@ public class SoundManager : MonoBehaviour
             case "Seagull":
                 _ids = new int[] { 0, 1, 2 };
             break;
+            case "WaterDash":
+                _ids = new int[] { 3, 4 };
+            break;
         }
 
         //Obtenemos un número random del array int
@@ -161,7 +168,7 @@ public class SoundManager : MonoBehaviour
     public void PlayMusic(string _name)
     {
         //Paramos la música que esté sonando ahora mismo
-        actualMusic.Stop();
+        //actualMusic.Stop();
 
         //Reproducimos la nueva música
         for (int i = 0; i < musics.Length; i++)
