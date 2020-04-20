@@ -35,7 +35,13 @@ public class WaterBlockBehav : MonoBehaviour
     {
         if (CheckBorders() && collision.tag == "Player")
         {
-            collision.GetComponent<PlayerBehav>().environment = PlayerBehav.Environment.WATER;
+            PlayerBehav player = collision.GetComponent<PlayerBehav>();
+
+            player.environment = PlayerBehav.Environment.WATER;
+
+            player.waterType = direction;
+
+            player.centerWater = transform.position;
         }
     }
 
@@ -43,7 +49,11 @@ public class WaterBlockBehav : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            collision.GetComponent<PlayerBehav>().environment = PlayerBehav.Environment.AIR;
+            PlayerBehav player = collision.GetComponent<PlayerBehav>();
+
+            player.environment = PlayerBehav.Environment.AIR;
+
+            player.waterType = WaterDirection.NONE;
         }
     }
 
