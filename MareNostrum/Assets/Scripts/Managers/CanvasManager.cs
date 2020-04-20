@@ -17,14 +17,16 @@ public class CanvasManager : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if(slider.value >= 0)
+        if (GameManager.Instance.consumeEnergy)
         {
-            slider.value -= energySubstract;
+            if (slider.value > 0)
+            {
+                slider.value -= energySubstract;
+            }
+            else
+            {
+                GameManager.Instance.playerControl = false;
+            }
         }
-        else
-        {
-            GameManager.Instance.playerControl = false;
-        }
-        
     }
 }
