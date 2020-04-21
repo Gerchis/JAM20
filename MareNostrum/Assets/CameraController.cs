@@ -6,8 +6,7 @@ public class CameraController : MonoBehaviour
 {
     public GameObject player;
     private Rigidbody2D rb;
-    public Rigidbody2D rbp;
-    public Collider2D a;
+    private Rigidbody2D rbp;
     private float playerX;
     private float playerY;
     private float cameraX;
@@ -31,25 +30,25 @@ public class CameraController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playerX > cameraX+2)
+        if (playerX > (cameraX + 2) && rbp.velocity.x > 0)
         {         
             rb.velocity = rbp.velocity;
         }
-        if (playerX > cameraX - 2)
+        else if (playerX < (cameraX - 2) && rbp.velocity.x < 0)
         {
             rb.velocity = rbp.velocity;
         }
-        if (playerY > cameraY + 1)
+        else if (playerY > (cameraY + 1) && rbp.velocity.y > 0)
         {
             rb.velocity = rbp.velocity;
         }
-        if (playerY > cameraY - 3.5)
+        else if (playerY < (cameraY - 3.5) && rbp.velocity.y < 0)
         {
             rb.velocity = rbp.velocity;
         }
         else
         {
-            rb.velocity = rbp.velocity;
+            rb.velocity = new Vector2 (0,0);
         }
     }
 
