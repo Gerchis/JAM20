@@ -414,16 +414,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6668111237811962424, guid: 08836a679bb80ff468ebb4f34d300753,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6668111237811962424, guid: 08836a679bb80ff468ebb4f34d300753,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 6167731598339254863, guid: 08836a679bb80ff468ebb4f34d300753,
         type: 3}
       propertyPath: m_Sprite
@@ -448,6 +438,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6668111237811962424, guid: 08836a679bb80ff468ebb4f34d300753,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6668111237811962424, guid: 08836a679bb80ff468ebb4f34d300753,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08836a679bb80ff468ebb4f34d300753, type: 3}
@@ -561,3 +561,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bff5bfbaa014aa43873f8f304429a18, type: 3}
+--- !u!1 &7445346474544598121 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7445346474648321826, guid: 9bff5bfbaa014aa43873f8f304429a18,
+    type: 3}
+  m_PrefabInstance: {fileID: 7445346474544598120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7445346474544598122
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445346474544598121}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ce944510cece8f42a0f5b527a0f3d99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

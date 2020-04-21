@@ -19,7 +19,7 @@ public class Audios
     }
     public Type type;
 
-    [Range(0.5f, 1.5f)]
+    [Range(0.5f, 2.5f)]
     public float pitch = 1f;
 
     //Random pitch + 2 o 3 clips de audio de un mismo efecto = evitamos que un sound effect sea repetitivo

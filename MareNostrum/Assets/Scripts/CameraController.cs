@@ -8,6 +8,12 @@ public class CameraController : MonoBehaviour
 
     public float maxY;
     public float maxX;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     void LateUpdate()
     {
         if (player.transform.position.y > transform.position.y)
