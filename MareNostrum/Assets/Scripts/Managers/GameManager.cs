@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,20 @@ public class GameManager : MonoBehaviour
    public void LoadScene (int _id)
     {
         SceneManager.LoadScene(_id);
+    }
+
+    /*index
+        ######################
+        #                    #
+        #  ENERGY MANAGEMENT #
+        #                    #
+        ######################
+    */
+    private Slider energySlider;
+
+    public void AddEnergy(int _value)
+    {
+        energySlider.value += _value;
     }
 
     /*index
@@ -37,8 +52,6 @@ public class GameManager : MonoBehaviour
         #                       #
         #########################
     */
-
-
 
     //Valores actuales de audio
     public float masterVolumenValueSaved;
@@ -80,6 +93,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        //Cogemos referencias
+        energySlider = GameObject.Find("EnergySlider").GetComponent<Slider>();
+
         //Habilitamos el control del personaje. Pasa a false cuando se queda sin energia y cae.
         playerControl = true;
         consumeEnergy = false;

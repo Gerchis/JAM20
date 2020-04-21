@@ -53,7 +53,7 @@ public class SeagullAutoController : MonoBehaviour
         //Animaciones
         animator = GetComponent<Animator>();
         keySeagullAstronaut = Animator.StringToHash("isAstronaut");
-        keySeagullAstronaut = Animator.StringToHash("isAviator");
+        keySeagullAviator = Animator.StringToHash("isAviator");
         keySeagullNormal = Animator.StringToHash("isNormal");
             
 
@@ -95,6 +95,12 @@ public class SeagullAutoController : MonoBehaviour
             default:
                 break;
         }
+
+        if(seagullMovement==SeagullMovement.POINTS && speed < 100)
+        {
+            speed = 100;
+        }
+
     }
 
     public void EnableSeagull()
