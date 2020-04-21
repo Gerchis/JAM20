@@ -146,7 +146,25 @@ MonoBehaviour:
     pitch: 1
     randomPitch: 0
   - name: Ingame
-    clip: {fileID: 8300000, guid: 0f969002a26e5c34d93138bd95ebf537, type: 3}
+    clip: {fileID: 8300000, guid: 6afcdf04965e2ac479a1e211d167c864, type: 3}
+    normalizedValue: -0.5
+    type: 1
+    pitch: 1
+    randomPitch: 0
+  - name: Anticipation1
+    clip: {fileID: 8300000, guid: 6489cd614f0fa234489db5f516126065, type: 3}
+    normalizedValue: -0.5
+    type: 1
+    pitch: 1
+    randomPitch: 0
+  - name: Anticipation2
+    clip: {fileID: 8300000, guid: 3511ce93a63f72b4bbed8c18190614a2, type: 3}
+    normalizedValue: -0.5
+    type: 1
+    pitch: 1
+    randomPitch: 0
+  - name: MemeFall
+    clip: {fileID: 8300000, guid: 6eeca87ad59418b48886a77d8ca3dfe9, type: 3}
     normalizedValue: -0.5
     type: 1
     pitch: 1

@@ -24,6 +24,8 @@ public class StartTrigger : MonoBehaviour
         GetComponent<SpriteRenderer>().enabled = false;
 
         maxTime = 25;
+
+        //SoundManager.Instance.PlayMusic("Ingame");
     }
 
     private void FixedUpdate()
