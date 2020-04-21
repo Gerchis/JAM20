@@ -565,6 +565,7 @@ MonoBehaviour:
   - {fileID: 6668111236172488942}
   - {fileID: 6668111237559931198}
   splash: {fileID: 5434884289465606124}
+  whirlwindExtraForce: 5
   animSplash: {fileID: 489109746255520540}
 --- !u!95 &971258812127364777
 Animator:
