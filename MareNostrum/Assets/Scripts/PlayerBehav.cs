@@ -24,6 +24,8 @@ public class PlayerBehav : MonoBehaviour
         AIR
     }
 
+    public GameManager.CharacterType characterType;
+
     public float moveForce;
     public float maxVel;
 
@@ -37,6 +39,7 @@ public class PlayerBehav : MonoBehaviour
 
     public float airGravity;
     public float waterGravity;
+    public float fallingGravity;
 
     public float streamForce;
     public float whirlwindForce;
@@ -51,10 +54,18 @@ public class PlayerBehav : MonoBehaviour
     
     private float energyDash;
 
+    private Animator anim;
+
     void Start()
     {
+        if (characterType != GameManager.Instance.characterSelection)
+        {
+            gameObject.SetActive(false);
+        }
+
         rb = GetComponent<Rigidbody2D>();
         energyDash = GameManager.Instance.energyDash;
+        anim = GetComponent<Animator>();
     }
         
     void Update()
@@ -68,15 +79,39 @@ public class PlayerBehav : MonoBehaviour
                     break;
                 case Directions.UP:
                     rotationAngle = Quaternion.Euler(0, 0, 0);
+
+                    if (!anim.GetBool("Front"))
+                    {
+                        anim.SetBool("Front", true);
+                        anim.SetBool("Side", false);
+                    }
                     break;
                 case Directions.DOWN:
                     rotationAngle = Quaternion.Euler(0, 0, 180);
+
+                    if (!anim.GetBool("Front"))
+                    {
+                        anim.SetBool("Front", true);
+                        anim.SetBool("Side", false);
+                    }
                     break;
                 case Directions.RIGHT:
                     rotationAngle = Quaternion.Euler(0, 0, -90);
+
+                    if (!anim.GetBool("Side"))
+                    {
+                        anim.SetBool("Side", true);
+                        anim.SetBool("Front", false);
+                    }
                     break;
                 case Directions.LEFT:
                     rotationAngle = Quaternion.Euler(0, 0, 90);
+
+                    if (!anim.GetBool("Side"))
+                    {
+                        anim.SetBool("Side", true);
+                        anim.SetBool("Front", false);
+                    }
                     break;
                 case Directions.UP_RIGHT:
                     rotationAngle = Quaternion.Euler(0, 0, -45);
@@ -131,6 +166,11 @@ public class PlayerBehav : MonoBehaviour
                 }
                 isDashing = true;
 
+                if (!anim.GetBool("Dash"))
+                {
+                    anim.SetBool("Dash", true);
+                }
+
                 InputManager.Instance.dashKey = false;
             } 
         }
@@ -165,8 +205,9 @@ public class PlayerBehav : MonoBehaviour
                             rb.AddForce(Vector2.left * streamForce, ForceMode2D.Impulse);
                             break;
                         case WaterBlockBehav.WaterDirection.WHIRLWIND:
-                            Vector3 whirwindDirection = (centerWater - transform.position).normalized;
-                            rb.AddForce(whirwindDirection * whirlwindForce, ForceMode2D.Force);
+                            Vector3 whirlwindDirection = (centerWater - transform.position).normalized;
+                            Vector3 whirlwindRotation = new Vector3(-whirlwindDirection.y, whirlwindDirection.x, 0);
+                            rb.AddForce((whirlwindDirection + whirlwindRotation) * whirlwindForce, ForceMode2D.Force);
                             break;
                     }
                     break;
@@ -254,7 +295,12 @@ public class PlayerBehav : MonoBehaviour
             else if (rb.velocity.x < maxVel && rb.velocity.x > -maxVel && rb.velocity.y < maxVel && rb.velocity.y > -maxVel && environment == Environment.WATER)
             {
                 isDashing = false;
+                anim.SetBool("Dash", false);
             }
-        } 
+        }
+        else
+        {
+            rb.AddForce(Vector2.down * fallingGravity, ForceMode2D.Force);
+        }
     }
 }

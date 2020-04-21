@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FishController : MonoBehaviour
 {
+    public Transform startingPosition;
     public float timer = 0.5f;
     private float positiveTimer;
     private float negativeTimer;
@@ -22,9 +23,9 @@ public class FishController : MonoBehaviour
         negativeTimer = -timer;
         rb = GetComponent<Rigidbody2D>();
         EnableFish();
-
+        GetComponent<Transform>().position = startingPosition.position;
         //Por si acaso, configuramos siempre que aporte un minimo de energia si no se configura en el inspector.
-        if(energyValue <= 0) { energyValue = 10; }
+        if (energyValue <= 0) { energyValue = 10; }
     }
 
     // Update is called once per frame

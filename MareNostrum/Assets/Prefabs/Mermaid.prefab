@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 7445346474648321829}
   - component: {fileID: 7445346474648321828}
   - component: {fileID: 7445346474648321827}
+  - component: {fileID: 7445346474544598122}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Mermaid
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,12 +72,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ce5b14325fad5e34fba5e6bcca1ebf05, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9cace8cb6386b94bba1f23e653fbe84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 10.8, y: 19.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -95,18 +96,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.25}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10.8, y: 19.2}
-    newSize: {x: 0.2, y: 0.2}
+    newSize: {x: 10.8, y: 19.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 2, y: 14.7}
   m_EdgeRadius: 0
 --- !u!50 &7445346474648321828
 Rigidbody2D:
@@ -147,8 +148,28 @@ MonoBehaviour:
   dashForce: 30
   airGravity: 50
   waterGravity: 5
+  fallingGravity: 80
   streamForce: 10
   whirlwindForce: 20
   centerWater: {x: 0, y: 0, z: 0}
   waterType: 0
   environment: 1
+--- !u!95 &7445346474544598122
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7445346474648321826}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0ce944510cece8f42a0f5b527a0f3d99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

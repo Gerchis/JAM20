@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SeagullAutoController : MonoBehaviour
 {
+    public Transform startingPosition;
+
     public float timer = 0.5f;
     private float positiveTimer;
     private float negativeTimer;
@@ -55,8 +57,7 @@ public class SeagullAutoController : MonoBehaviour
         keySeagullAstronaut = Animator.StringToHash("isAstronaut");
         keySeagullAviator = Animator.StringToHash("isAviator");
         keySeagullNormal = Animator.StringToHash("isNormal");
-            
-
+        GetComponent<Transform>().position = startingPosition.position;
         //Comportamiento
 
         rb = GetComponent<Rigidbody2D>();
