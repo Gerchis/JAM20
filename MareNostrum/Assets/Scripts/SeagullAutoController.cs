@@ -230,6 +230,8 @@ public class SeagullAutoController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             SoundManager.Instance.PlayRandomSound("Seagull");
+
+            GameManager.Instance.playerControl = false;
         }
     }
 }
