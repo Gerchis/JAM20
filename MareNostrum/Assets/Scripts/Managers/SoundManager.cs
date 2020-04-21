@@ -43,27 +43,32 @@ public class Audios
 
     public void Play()
     {
-             
-        
+
+
         //Seteamos volumen del sonido
-        source.volume = GameManager.Instance.masterVolumenValueSaved + normalizedValue;
+        Debug.LogWarning(name);
         Debug.Log("volume master: " + GameManager.Instance.masterVolumenValueSaved);
         Debug.Log("volume normalized: " + normalizedValue);
+        Debug.Log("volume effects: " + GameManager.Instance.effectsVolumenValueSaved);
+
+        source.volume = GameManager.Instance.masterVolumenValueSaved - normalizedValue;
+        
         Debug.Log("volume after maste/normalized: " + source.volume);
+
         switch (type)
         {
             case Type.EFFECT:
-                source.volume *= GameManager.Instance.effectsVolumenValueSaved + normalizedValue;
+                source.volume *= GameManager.Instance.effectsVolumenValueSaved - normalizedValue;
             break;
             case Type.MUSIC:
-                source.volume *= GameManager.Instance.musicVolumenValueSaved + normalizedValue;
+                source.volume *= GameManager.Instance.musicVolumenValueSaved - normalizedValue;
             break;
             default:
-                source.volume *= GameManager.Instance.masterVolumenValueSaved + normalizedValue;
+                source.volume *= GameManager.Instance.masterVolumenValueSaved - normalizedValue;
             break;
         }
         
-        Debug.Log("volume post options: " + source.volume);
+        Debug.Log("volume post effects/normalized: " + source.volume);
 
 
         //Si randomPitch=0, pitch queda sin modificar
@@ -99,7 +104,6 @@ public class SoundManager : MonoBehaviour
     //Función para buscar el sonido y reproducirlo.
     public void PlaySound(string _name)
     {
-        Debug.Log("Playing sound");
         for (int i = 0; i < sounds.Length; i++)
         {
             if (sounds[i].name == _name)

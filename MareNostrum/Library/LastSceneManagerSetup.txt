@@ -1,4 +1,8 @@
 sceneSetups:
-- path: Assets/Scenes/Menu.unity
+<<<<<<< HEAD
+- path: Assets/Scenes/Sergio.unity
+=======
+- path: Assets/Scenes/DevRoom.unity
+>>>>>>> 9ff70c4970aac569ca68c21bd5e0f7f24a5709e0
   isLoaded: 1
   isActive: 1
