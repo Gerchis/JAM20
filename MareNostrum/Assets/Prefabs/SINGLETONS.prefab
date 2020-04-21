@@ -85,19 +85,19 @@ MonoBehaviour:
   sounds:
   - name: Seagull1
     clip: {fileID: 8300000, guid: 8060aad43efecc34c8166e8b6ce018c7, type: 3}
-    normalizedValue: 0
+    normalizedValue: 0.47
     type: 0
     pitch: 1
     randomPitch: 0.2
   - name: Seagull2
     clip: {fileID: 8300000, guid: 8ea464757207cb841a1d6bdb3d6479d4, type: 3}
-    normalizedValue: 0
+    normalizedValue: 0.47
     type: 0
     pitch: 1
     randomPitch: 0.2
   - name: Seagull3
     clip: {fileID: 8300000, guid: b22edd742f3129e4dafe80dc56e02032, type: 3}
-    normalizedValue: 0
+    normalizedValue: 0.47
     type: 0
     pitch: 1
     randomPitch: 0.2
@@ -117,8 +117,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: bd0821f5cf4af1f4488fcaded2e20d38, type: 3}
     normalizedValue: 0
     type: 0
-    pitch: 1.5
-    randomPitch: 0.2
+    pitch: 1.35
+    randomPitch: 0.15
   - name: WaterSplash1
     clip: {fileID: 8300000, guid: 7111dc552a96f074e89fa1d0717b494f, type: 3}
     normalizedValue: 0.25
