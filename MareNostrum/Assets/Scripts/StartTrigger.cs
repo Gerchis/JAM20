@@ -19,6 +19,7 @@ public class StartTrigger : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             GameManager.Instance.consumeEnergy = false;
+            GameManager.Instance.playerControl = true;
             GameManager.Instance.RestoreEnergy();
 
             foreach (Transform child in fishes.transform)
