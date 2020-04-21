@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Base path: L:/Unity/Editor/Data
 Cmd: initializeCompiler
 Cmd: preprocess
@@ -22,6 +23,39 @@ Cmd: preprocess
   insize=4453 outsize=3687 ok=1
 Cmd: preprocess
   insize=7870 outsize=2504 ok=1
+=======
+Base path: C:/Program Files/Unity/Editor/Data
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+>>>>>>> 48bca5504067f416dbff11ca3f7be230db76e148
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
