@@ -37,6 +37,7 @@ public class PlayerBehav : MonoBehaviour
 
     public float airGravity;
     public float waterGravity;
+    public float fallingGravity;
 
     public float streamForce;
     public float whirlwindForce;
@@ -288,6 +289,10 @@ public class PlayerBehav : MonoBehaviour
                 isDashing = false;
                 anim.SetBool("Dash", false);
             }
-        } 
+        }
+        else
+        {
+            rb.AddForce(Vector2.down * fallingGravity, ForceMode2D.Force);
+        }
     }
 }

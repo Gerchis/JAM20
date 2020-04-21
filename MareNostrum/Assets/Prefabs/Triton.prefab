@@ -148,6 +148,7 @@ MonoBehaviour:
   dashForce: 30
   airGravity: 50
   waterGravity: 5
+  fallingGravity: 80
   streamForce: 10
   whirlwindForce: 20
   centerWater: {x: 0, y: 0, z: 0}
