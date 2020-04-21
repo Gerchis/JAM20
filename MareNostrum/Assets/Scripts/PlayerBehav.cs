@@ -56,15 +56,13 @@ public class PlayerBehav : MonoBehaviour
 
     private Animator anim;
 
-    private void Awake()
+    void Start()
     {
         if (characterType != GameManager.Instance.characterSelection)
         {
             gameObject.SetActive(false);
         }
-    }
-    void Start()
-    {
+
         rb = GetComponent<Rigidbody2D>();
         energyDash = GameManager.Instance.energyDash;
         anim = GetComponent<Animator>();
@@ -207,8 +205,9 @@ public class PlayerBehav : MonoBehaviour
                             rb.AddForce(Vector2.left * streamForce, ForceMode2D.Impulse);
                             break;
                         case WaterBlockBehav.WaterDirection.WHIRLWIND:
-                            Vector3 whirwindDirection = (centerWater - transform.position).normalized;
-                            rb.AddForce(whirwindDirection * whirlwindForce, ForceMode2D.Force);
+                            Vector3 whirlwindDirection = (centerWater - transform.position).normalized;
+                            Vector3 whirlwindRotation = new Vector3(-whirlwindDirection.y, whirlwindDirection.x, 0);
+                            rb.AddForce((whirlwindDirection + whirlwindRotation) * whirlwindForce, ForceMode2D.Force);
                             break;
                     }
                     break;
