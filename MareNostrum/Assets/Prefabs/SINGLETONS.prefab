@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e616b48173b8542a46c25e268cb3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  energySubstract: 0.25
   playerControl: 0
   consumeEnergy: 0
   masterVolumenValueSaved: 1

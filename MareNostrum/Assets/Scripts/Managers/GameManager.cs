@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     */
     private Slider energySlider;
     public float energySubstract;
+
     public void AddEnergy(int _value)
     {
         energySlider.value += _value;
