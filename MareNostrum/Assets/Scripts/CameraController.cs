@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject player;
+    public GameObject[] players;
 
     public float maxY;
     public float maxX;
@@ -12,7 +13,17 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        //player = GameObject.FindGameObjectWithTag("Player");
+        players = GameObject.FindGameObjectsWithTag("Player");
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            if (players[i].GetComponent<PlayerBehav>().characterType == GameManager.Instance.characterSelection)
+            {
+                player = players[i];
+            }
+        }
+        
     }
 
     void LateUpdate()
