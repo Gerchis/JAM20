@@ -13,6 +13,11 @@ public class MainMenuController : MonoBehaviour
       #####################
     */
 
+    public void test(GameManager.CharacterType type)
+    {
+
+    }
+
     public void playGame(bool mermaid)
     {
         if(mermaid)
