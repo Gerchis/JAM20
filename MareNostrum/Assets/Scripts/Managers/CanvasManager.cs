@@ -28,7 +28,7 @@ public class CanvasManager : MonoBehaviour
         if (GameManager.Instance.consumeEnergy)
         {
             actTime += Time.fixedDeltaTime*1000;
-            Debug.Log("actTime: "+actTime);
+            
             if (slider.value > 0)
             {
                 if (actTime >= maxTime)

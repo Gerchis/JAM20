@@ -56,14 +56,12 @@ public class FishController : MonoBehaviour
 
             if (timer <= negativeTimer && direction == false)
             {
-                Debug.Log("Izquierda");
                 rb.velocity = new Vector2  (-speed, 0);
                 timer = positiveTimer;
                 direction = true;
             }
             else if (timer <= 0.0f && direction == true)
             {
-                Debug.Log("Derecha");
                 rb.velocity = new Vector2(+speed, 0);
                 direction = false;
             }

@@ -142,7 +142,7 @@ public class SeagullAutoController : MonoBehaviour
 
         if (timer <= negativeTimer && goingRight == false)
         {
-            Debug.Log("Izquierda");
+            
             spr.flipX = false;
             rb.velocity = new Vector2(-speed, 0);
             timer = positiveTimer;
@@ -150,7 +150,7 @@ public class SeagullAutoController : MonoBehaviour
         }
         else if (timer <= 0.0f && goingRight == true)
         {
-            Debug.Log("Derecha");
+            
             spr.flipX = true;
             rb.velocity = new Vector2(+speed, 0);
             goingRight = false;

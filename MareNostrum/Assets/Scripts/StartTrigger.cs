@@ -10,6 +10,7 @@ public class StartTrigger : MonoBehaviour
     void Start()
     {
         fishes = GameObject.Find("Fishes");
+        GetComponent<SpriteRenderer>().enabled = false;
     }
 
     //Cuando el Player entra al mar, respawnean peces y se desactiva el consumir energia.
