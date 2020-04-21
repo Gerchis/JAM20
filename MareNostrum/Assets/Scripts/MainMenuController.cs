@@ -13,9 +13,9 @@ public class MainMenuController : MonoBehaviour
       #####################
     */
 
-    public void test(GameManager.CharacterType type)
+    public void QuitGame()
     {
-
+        Application.Quit();
     }
 
     public void playGame(bool mermaid)
@@ -75,7 +75,7 @@ public class MainMenuController : MonoBehaviour
     void Start()
     {
         masterVolumen = GameObject.Find("MasterVolumeSlider").GetComponent<Slider>();
-        musicVolumen = GameObject.Find("MusciVolumeSlider").GetComponent<Slider>();
+        musicVolumen = GameObject.Find("MusicVolumeSlider").GetComponent<Slider>();
         effectsVolumen = GameObject.Find("EffectsVolumeSlider").GetComponent<Slider>();
 
         mainmenuCanvas.SetActive(true);

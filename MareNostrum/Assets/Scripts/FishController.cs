@@ -13,6 +13,13 @@ public class FishController : MonoBehaviour
     private bool direction = true;
     private bool isActive;
 
+    public enum FishMovement
+    {
+        TIMER,
+        STATIC
+    }
+    public FishMovement fishMovement;
+
     //Cuanta energia aporta al jugador
     public float energyValue;
 

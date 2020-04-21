@@ -66,6 +66,7 @@ public class PlayerBehav : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         energyDash = GameManager.Instance.energyDash;
         anim = GetComponent<Animator>();
+        GameManager.Instance.LoadIngameReferences();
     }
         
     void Update()
