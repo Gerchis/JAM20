@@ -26,11 +26,18 @@ public class GameManager : MonoBehaviour
         ######################
     */
     private Slider energySlider;
+    public float msToSubstractEnergy;
     public float energySubstract;
+    public float energyDash;
 
-    public void AddEnergy(int _value)
+    public void ModifyEnergy(float _value)
     {
         energySlider.value += _value;
+    }
+
+    public void RestoreEnergy()
+    {
+        energySlider.value = energySlider.maxValue;
     }
 
     /*index

@@ -49,9 +49,12 @@ public class PlayerBehav : MonoBehaviour
 
     public Environment environment = Environment.NONE;
     
+    private float energyDash;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        energyDash = GameManager.Instance.energyDash;
     }
         
     void Update()
@@ -94,6 +97,9 @@ public class PlayerBehav : MonoBehaviour
             //!Logica del dash
             if (InputManager.Instance.dashKey && !isDashing)
             {
+                SoundManager.Instance.PlayRandomSound("WaterDash");
+                GameManager.Instance.ModifyEnergy(energyDash);
+
                 switch (facingDirection)
                 {
                     case Directions.NONE:
