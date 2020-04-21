@@ -29,6 +29,10 @@ public class Audios
 
     private AudioSource source;
 
+    public bool isPlaying()
+    {
+        return source.isPlaying;
+    }
 
     public void setSource(AudioSource _source)
     {
@@ -173,12 +177,14 @@ public class SoundManager : MonoBehaviour
     {
         //Paramos la música que esté sonando ahora mismo
         //actualMusic.Stop();
+        
 
         //Reproducimos la nueva música
         for (int i = 0; i < musics.Length; i++)
         {
             if (musics[i].name == _name)
             {
+                if (musics[i].isPlaying()) { return; }
                 musics[i].Play();
                 actualMusic = musics[i].getSource();
                 return;

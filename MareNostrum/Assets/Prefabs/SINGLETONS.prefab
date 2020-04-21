@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e616b48173b8542a46c25e268cb3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterSelection: 0
   msToSubstractEnergy: 500
   energySubstract: 1
   energyDash: -2
@@ -125,6 +126,18 @@ MonoBehaviour:
     type: 0
     pitch: 1.5
     randomPitch: 0.2
+  - name: BubbleImportant
+    clip: {fileID: 8300000, guid: bdebc5bb896e47f4fb81c81e991bd4a8, type: 3}
+    normalizedValue: 0.25
+    type: 0
+    pitch: 1.5
+    randomPitch: 0.2
+  - name: BubbleNormal
+    clip: {fileID: 8300000, guid: a62468330dc5b8d448c276f24eb62807, type: 3}
+    normalizedValue: 0.25
+    type: 0
+    pitch: 1.5
+    randomPitch: 0.2
   musics:
   - name: Menu
     clip: {fileID: 0}
@@ -133,7 +146,25 @@ MonoBehaviour:
     pitch: 1
     randomPitch: 0
   - name: Ingame
-    clip: {fileID: 8300000, guid: 0f969002a26e5c34d93138bd95ebf537, type: 3}
+    clip: {fileID: 8300000, guid: 6afcdf04965e2ac479a1e211d167c864, type: 3}
+    normalizedValue: -0.5
+    type: 1
+    pitch: 1
+    randomPitch: 0
+  - name: Anticipation1
+    clip: {fileID: 8300000, guid: 6489cd614f0fa234489db5f516126065, type: 3}
+    normalizedValue: -0.5
+    type: 1
+    pitch: 1
+    randomPitch: 0
+  - name: Anticipation2
+    clip: {fileID: 8300000, guid: 3511ce93a63f72b4bbed8c18190614a2, type: 3}
+    normalizedValue: -0.5
+    type: 1
+    pitch: 1
+    randomPitch: 0
+  - name: MemeFall
+    clip: {fileID: 8300000, guid: 6eeca87ad59418b48886a77d8ca3dfe9, type: 3}
     normalizedValue: -0.5
     type: 1
     pitch: 1

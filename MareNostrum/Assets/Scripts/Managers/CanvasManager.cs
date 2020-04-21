@@ -44,5 +44,20 @@ public class CanvasManager : MonoBehaviour
                 GameManager.Instance.playerControl = false;
             }
         }
+
+        if (slider.value <= 50 && slider.value >25)
+        {
+            SoundManager.Instance.PlayMusic("Anticipation1");
+        }
+        else if (slider.value <= 25 && slider.value > 0)
+        {
+            SoundManager.Instance.StopMusic();
+            SoundManager.Instance.PlayMusic("Anticipation2");
+        }
+        else if (slider.value<=0)
+        {
+            SoundManager.Instance.StopMusic();
+            SoundManager.Instance.PlayMusic("MemeFall");
+        }
     }
 }
