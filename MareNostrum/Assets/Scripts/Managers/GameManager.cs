@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
         #                    #
         ######################
     */
-
    public void LoadScene (int _id)
     {
         SceneManager.LoadScene(_id);
