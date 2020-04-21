@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CanvasManager : MonoBehaviour
 {
     private Slider slider;
-    private float energySubstract;
+    private float energySubstract = 0;
 
 
     // Start is called before the first frame update
