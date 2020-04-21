@@ -34,6 +34,7 @@ public class CameraController : MonoBehaviour
         {
             transform.position = new Vector3(player.transform.position.x + maxX, transform.position.y, transform.position.z);
         }
+
         if (transform.position.x > edgeX)
         {
             transform.position = new Vector3(edgeX, transform.position.y, transform.position.z);
