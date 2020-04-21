@@ -24,6 +24,8 @@ public class PlayerBehav : MonoBehaviour
         AIR
     }
 
+    public GameManager.CharacterType characterType;
+
     public float moveForce;
     public float maxVel;
 
@@ -54,6 +56,13 @@ public class PlayerBehav : MonoBehaviour
 
     private Animator anim;
 
+    private void Awake()
+    {
+        if (characterType != GameManager.Instance.characterSelection)
+        {
+            gameObject.SetActive(false);
+        }
+    }
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
