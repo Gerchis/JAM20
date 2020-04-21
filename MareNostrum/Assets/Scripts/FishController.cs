@@ -7,6 +7,7 @@ public class FishController : MonoBehaviour
     public Transform startingPosition;
     
     public float timer = 0.5f;
+    private float timerCount;
     private float positiveTimer;
     private float negativeTimer;
     public Rigidbody2D rb;
@@ -45,6 +46,7 @@ public class FishController : MonoBehaviour
 
     public void EnableFish()
     {
+        timerCount = timer;
         gameObject.transform.position = startingPosition.position;
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<CircleCollider2D>().enabled = true;
@@ -65,15 +67,15 @@ public class FishController : MonoBehaviour
         {
             if (fishMovement == FishMovement.TIMER)
             {
-                timer -= Time.deltaTime;
+                timerCount -= Time.deltaTime;
 
-                if (timer <= negativeTimer && direction == false)
+                if (timerCount <= negativeTimer && direction == false)
                 {
                     rb.velocity = new Vector2(-speed, 0);
-                    timer = positiveTimer;
+                    timerCount = positiveTimer;
                     direction = true;
                 }
-                else if (timer <= 0.0f && direction == true)
+                else if (timerCount <= 0.0f && direction == true)
                 {
                     rb.velocity = new Vector2(+speed, 0);
                     direction = false;

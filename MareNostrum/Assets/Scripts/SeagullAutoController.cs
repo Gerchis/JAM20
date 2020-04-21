@@ -7,6 +7,7 @@ public class SeagullAutoController : MonoBehaviour
     public Transform startingPosition;
 
     public float timer = 0.5f;
+    private float timerCount;
     private float positiveTimer;
     private float negativeTimer;
     private Rigidbody2D rb;
@@ -106,6 +107,7 @@ public class SeagullAutoController : MonoBehaviour
 
     public void EnableSeagull()
     {
+        timerCount = timer;
         gameObject.transform.position = startingPosition.position;
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<BoxCollider2D>().enabled = true;
@@ -142,17 +144,17 @@ public class SeagullAutoController : MonoBehaviour
 
     private void AutoMove()
     {
-        timer -= Time.deltaTime;
+        timerCount -= Time.deltaTime;
 
-        if (timer <= negativeTimer && goingRight == false)
+        if (timerCount <= negativeTimer && goingRight == false)
         {
             
             spr.flipX = false;
             rb.velocity = new Vector2(-speed, 0);
-            timer = positiveTimer;
+            timerCount = positiveTimer;
             goingRight = true;
         }
-        else if (timer <= 0.0f && goingRight == true)
+        else if (timerCount <= 0.0f && goingRight == true)
         {
             
             spr.flipX = true;
