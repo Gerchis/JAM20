@@ -51,10 +51,13 @@ public class PlayerBehav : MonoBehaviour
     
     private float energyDash;
 
+    private Animator anim;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         energyDash = GameManager.Instance.energyDash;
+        anim = GetComponent<Animator>();
     }
         
     void Update()
@@ -68,15 +71,39 @@ public class PlayerBehav : MonoBehaviour
                     break;
                 case Directions.UP:
                     rotationAngle = Quaternion.Euler(0, 0, 0);
+
+                    if (!anim.GetBool("Front"))
+                    {
+                        anim.SetBool("Front", true);
+                        anim.SetBool("Side", false);
+                    }
                     break;
                 case Directions.DOWN:
                     rotationAngle = Quaternion.Euler(0, 0, 180);
+
+                    if (!anim.GetBool("Front"))
+                    {
+                        anim.SetBool("Front", true);
+                        anim.SetBool("Side", false);
+                    }
                     break;
                 case Directions.RIGHT:
                     rotationAngle = Quaternion.Euler(0, 0, -90);
+
+                    if (!anim.GetBool("Side"))
+                    {
+                        anim.SetBool("Side", true);
+                        anim.SetBool("Front", false);
+                    }
                     break;
                 case Directions.LEFT:
                     rotationAngle = Quaternion.Euler(0, 0, 90);
+
+                    if (!anim.GetBool("Side"))
+                    {
+                        anim.SetBool("Side", true);
+                        anim.SetBool("Front", false);
+                    }
                     break;
                 case Directions.UP_RIGHT:
                     rotationAngle = Quaternion.Euler(0, 0, -45);
@@ -130,6 +157,11 @@ public class PlayerBehav : MonoBehaviour
                         break;
                 }
                 isDashing = true;
+
+                if (!anim.GetBool("Dash"))
+                {
+                    anim.SetBool("Dash", true);
+                }
 
                 InputManager.Instance.dashKey = false;
             } 
@@ -254,6 +286,7 @@ public class PlayerBehav : MonoBehaviour
             else if (rb.velocity.x < maxVel && rb.velocity.x > -maxVel && rb.velocity.y < maxVel && rb.velocity.y > -maxVel && environment == Environment.WATER)
             {
                 isDashing = false;
+                anim.SetBool("Dash", false);
             }
         } 
     }
