@@ -27,6 +27,12 @@ public class GameManager : MonoBehaviour
 
     public CharacterType characterSelection;
 
+    public void LoadIngameReferences()
+    {
+        //Cogemos referencias
+        energySlider = GameObject.Find("EnergySlider").GetComponent<Slider>();
+    }
+
     /*index
         ######################
         #                    #
@@ -109,9 +115,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //Cogemos referencias
-        energySlider = GameObject.Find("EnergySlider").GetComponent<Slider>();
-
         //Habilitamos el control del personaje. Pasa a false cuando se queda sin energia y cae.
         playerControl = true;
         consumeEnergy = false;
