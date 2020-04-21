@@ -295,7 +295,7 @@ PrefabInstance:
     - target: {fileID: 3112813480079801680, guid: b622704c1fed91a4a91e8ac49c04ad09,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.81
+      value: -9.73
       objectReference: {fileID: 0}
     - target: {fileID: 3112813480079801680, guid: b622704c1fed91a4a91e8ac49c04ad09,
         type: 3}
@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 131575488}
   - component: {fileID: 131575487}
   m_Layer: 0
-  m_Name: Fish
+  m_Name: GoalInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -482,7 +482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.72, y: 573.57}
+  m_AnchoredPosition: {x: 36, y: 573.57}
   m_SizeDelta: {x: 228.4, y: 74.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &131575487
@@ -518,7 +518,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Try to catch the moon
+  m_Text: Try to reach the moon
 --- !u!222 &131575488
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1454,7 +1454,7 @@ GameObject:
   - component: {fileID: 527860968}
   - component: {fileID: 527860967}
   m_Layer: 0
-  m_Name: wasd
+  m_Name: MovementInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2446,7 +2446,7 @@ GameObject:
   - component: {fileID: 1376248038}
   - component: {fileID: 1376248037}
   m_Layer: 0
-  m_Name: space
+  m_Name: SpaceInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2757,7 +2757,7 @@ GameObject:
   - component: {fileID: 1572887429}
   - component: {fileID: 1572887428}
   m_Layer: 0
-  m_Name: energy
+  m_Name: EnergyInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2817,7 +2817,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Outside here, you will lose energy
 
-    Eat fishes to gain energy'
+    Eat fishes to regain strength'
 --- !u!222 &1572887429
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3175,7 +3175,7 @@ GameObject:
   - component: {fileID: 1814338819}
   - component: {fileID: 1814338818}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3857,6 +3857,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0183221
       objectReference: {fileID: 0}
+    - target: {fileID: 7325514159607631806, guid: 08836a679bb80ff468ebb4f34d300753,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325514159607631806, guid: 08836a679bb80ff468ebb4f34d300753,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6668111237811962430, guid: 08836a679bb80ff468ebb4f34d300753,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -3872,25 +3882,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.18
       objectReference: {fileID: 0}
-    - target: {fileID: 6668111237811962431, guid: 08836a679bb80ff468ebb4f34d300753,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7325514159607631806, guid: 08836a679bb80ff468ebb4f34d300753,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7325514159607631806, guid: 08836a679bb80ff468ebb4f34d300753,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 6668111237811962428, guid: 08836a679bb80ff468ebb4f34d300753,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6668111237811962431, guid: 08836a679bb80ff468ebb4f34d300753,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08836a679bb80ff468ebb4f34d300753, type: 3}

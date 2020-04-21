@@ -49,3 +49,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 1810475125
+    locked: 0
+  - name: GameElements
+    uniqueID: 2847985155
+    locked: 0
+  - name: WaterBlocks
+    uniqueID: 412705675
+    locked: 0
+  - name: WaterEffects
+    uniqueID: 1309438405
+    locked: 0
+  - name: InternalNavPoints
+    uniqueID: 566616807
+    locked: 0
