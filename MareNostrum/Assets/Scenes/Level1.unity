@@ -1388,7 +1388,7 @@ PrefabInstance:
     - target: {fileID: 7445346474648321826, guid: 9bff5bfbaa014aa43873f8f304429a18,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7445346474648321831, guid: 9bff5bfbaa014aa43873f8f304429a18,
         type: 3}
@@ -2140,6 +2140,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Triton
       objectReference: {fileID: 0}
+    - target: {fileID: 1439782790373024381, guid: 4931c4afede267147870fda4207ca440,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1439782790373024376, guid: 4931c4afede267147870fda4207ca440,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2352,6 +2357,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 8.009586
+      objectReference: {fileID: 0}
+    - target: {fileID: 5795288606977394413, guid: e8fe31a8b32daa347b58d30ef9a46b5f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8fe31a8b32daa347b58d30ef9a46b5f, type: 3}
