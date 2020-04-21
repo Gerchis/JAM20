@@ -1,0 +1,498 @@
+fileFormatVersion: 2
+guid: 3d14a51fe2efb9147aa9dbbaeeee422d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: "FRAMES ANIMACI\xD3N SIRENA LATERAL_0"
+    21300002: "FRAMES ANIMACI\xD3N SIRENA LATERAL_1"
+    21300004: "FRAMES ANIMACI\xD3N SIRENA LATERAL_2"
+    21300006: "FRAMES ANIMACI\xD3N SIRENA LATERAL_3"
+    21300008: "FRAMES ANIMACI\xD3N SIRENA LATERAL_4"
+    21300010: "FRAMES ANIMACI\xD3N SIRENA LATERAL_5"
+    21300012: "FRAMES ANIMACI\xD3N SIRENA LATERAL_6"
+    21300014: "FRAMES ANIMACI\xD3N SIRENA LATERAL_7"
+    21300016: "FRAMES ANIMACI\xD3N SIRENA LATERAL_8"
+    21300018: "FRAMES ANIMACI\xD3N SIRENA LATERAL_9"
+    21300020: "FRAMES ANIMACI\xD3N SIRENA LATERAL_10"
+    21300022: "FRAMES ANIMACI\xD3N SIRENA LATERAL_11"
+    21300024: "FRAMES ANIMACI\xD3N SIRENA LATERAL_12"
+    21300026: "FRAMES ANIMACI\xD3N SIRENA LATERAL_13"
+    21300028: "FRAMES ANIMACI\xD3N SIRENA LATERAL_14"
+    21300030: "FRAMES ANIMACI\xD3N SIRENA LATERAL_15"
+    21300032: "FRAMES ANIMACI\xD3N SIRENA LATERAL_16"
+    21300034: "FRAMES ANIMACI\xD3N SIRENA LATERAL_17"
+    21300036: "FRAMES ANIMACI\xD3N SIRENA LATERAL_18"
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_0"
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 2315
+        width: 70
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34b5044e682a39499b60561cc1b7978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_1"
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1818
+        width: 1856
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f939bda567e67b40805e4a309bdfb73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_2"
+      rect:
+        serializedVersion: 2
+        x: 3343
+        y: 2157
+        width: 158
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0256ad738d8694640b856d4af5906e4b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_3"
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 887
+        width: 1909
+        height: 697
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73b37f521a89da544af457ef9cfc7d6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_4"
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1505
+        width: 72
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea7a640aa6034d409c76cae514902bb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_5"
+      rect:
+        serializedVersion: 2
+        x: 1658
+        y: 1361
+        width: 1844
+        height: 647
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2848d75f2a3c14a80cad6023015486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_6"
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 968
+        width: 67
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85f965c0016d804eaef499db69addde
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_7"
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 513
+        width: 1853
+        height: 625
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253f08475e04fdf4b9beb9ed2e9ab38b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_8"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 855
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992ce6d4466a63145bcaec9f5ed23980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_9"
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 829
+        width: 70
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a746e395b5d02a4c97c7dacb7fecd94
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_10"
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 822
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33cf4461a71b5143a48e013783de0a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_11"
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 819
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff2a04eedc1e6c4499a2aac74bba405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_12"
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 800
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b16ea0147f6e6418637ad13f18a971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_13"
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 784
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c16dff2d03f8643ad83d314b6e1a60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_14"
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 718
+        width: 25
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233c8c24852b2274c93ada6956a8e3f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_15"
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 544
+        width: 79
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8507c94301b475645af8f2f94f31a1bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_16"
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 65
+        width: 1845
+        height: 635
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69bad14d3d09f134a9f6f49bcb41da35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_17"
+      rect:
+        serializedVersion: 2
+        x: 3353
+        y: 170
+        width: 118
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de3330e21a72bc4d80dc4d5876fa6e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "FRAMES ANIMACI\xD3N SIRENA LATERAL_18"
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 98
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97a71f593f3a7842bdac5b6b1fd34f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0e929aa378085b84ab15c1640fe54839
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
