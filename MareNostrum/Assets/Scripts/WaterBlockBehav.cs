@@ -20,11 +20,38 @@ public class WaterBlockBehav : MonoBehaviour
 
     public GameObject splash;
 
+    private Animator anim;
     public Animator animSplash;
 
     private void Start()
     {
-        
+        anim = GetComponent<Animator>();
+
+        switch (direction)
+        {
+            case WaterDirection.NONE:
+                anim.SetBool("Stream", false);
+                anim.SetBool("Whirlwind", false);
+                break;
+            case WaterDirection.UP:
+                anim.SetBool("Stream", true);
+                break;
+            case WaterDirection.DOWN:
+                GetComponentInParent<Transform>().Rotate(0, 0, 180);
+                anim.SetBool("Stream", true);
+                break;
+            case WaterDirection.RIGHT:
+                GetComponentInParent<Transform>().Rotate(0, 0, -90);
+                anim.SetBool("Stream", true);
+                break;
+            case WaterDirection.LEFT:
+                GetComponentInParent<Transform>().Rotate(0, 0, 90);
+                anim.SetBool("Stream", true);
+                break;
+            case WaterDirection.WHIRLWIND:
+                anim.SetBool("Whirlwind", true);
+                break;
+        }
     }
 
     private bool CheckBorders()
