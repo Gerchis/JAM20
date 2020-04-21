@@ -147,6 +147,7 @@ MonoBehaviour:
   maxVel: 4
   rotationVel: 15
   dashForce: 30
+  dashBase: 30
   airGravity: 50
   waterGravity: 5
   fallingGravity: 80

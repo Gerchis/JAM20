@@ -20,6 +20,8 @@ public class WaterBlockBehav : MonoBehaviour
 
     public GameObject splash;
 
+    public float whirlwindExtraForce;
+
     private Animator anim;
     public Animator animSplash;
 
@@ -106,6 +108,11 @@ public class WaterBlockBehav : MonoBehaviour
             splash.transform.position = splashPosition;
 
             animSplash.SetTrigger("Splash");
+
+            if (direction == WaterDirection.WHIRLWIND && collision.GetComponent<PlayerBehav>().dashForce == collision.GetComponent<PlayerBehav>().dashBase)
+            {
+                collision.GetComponent<PlayerBehav>().dashForce += whirlwindExtraForce;
+            }
         }
     }
 
@@ -132,6 +139,11 @@ public class WaterBlockBehav : MonoBehaviour
             player.environment = PlayerBehav.Environment.AIR;
 
             player.waterType = WaterDirection.NONE;
+
+            if (direction == WaterDirection.WHIRLWIND && player.dashForce == player.dashBase + whirlwindExtraForce)
+            {
+                player.dashForce -= whirlwindExtraForce;
+            }
         }
     }
 }
