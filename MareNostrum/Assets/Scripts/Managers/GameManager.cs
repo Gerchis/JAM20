@@ -6,6 +6,13 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public enum CharacterType
+    {
+        NONE,
+        MERMAID,
+        TRITON
+    }
+
     /*index
         ######################
         #                    #
@@ -17,6 +24,8 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(_id);
     }
+
+    public CharacterType characterSelection;
 
     /*index
         ######################
