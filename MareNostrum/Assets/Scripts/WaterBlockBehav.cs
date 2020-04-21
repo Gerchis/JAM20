@@ -22,6 +22,11 @@ public class WaterBlockBehav : MonoBehaviour
 
     public Animator animSplash;
 
+    private void Start()
+    {
+        
+    }
+
     private bool CheckBorders()
     {
         for (int i = 0; i < borders.Length; i++)

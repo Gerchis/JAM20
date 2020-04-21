@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 6668111237811962427}
   - component: {fileID: 6668111237811962424}
   - component: {fileID: 6668111237811962425}
+  - component: {fileID: 971258812127364777}
   m_Layer: 0
   m_Name: WaterCollider
   m_TagString: WaterBlock
@@ -565,6 +566,25 @@ MonoBehaviour:
   - {fileID: 6668111237559931198}
   splash: {fileID: 5434884289465606124}
   animSplash: {fileID: 489109746255520540}
+--- !u!95 &971258812127364777
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6668111237811962428}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ec3db846f736b6a4a9b4d36163e5893c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9103681190146751640
 GameObject:
   m_ObjectHideFlags: 0
