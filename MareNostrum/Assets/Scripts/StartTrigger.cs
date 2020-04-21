@@ -25,6 +25,7 @@ public class StartTrigger : MonoBehaviour
             foreach (Transform child in fishes.transform)
             {
                 child.GetComponent<FishController>().EnableFish();
+
             }
         }
     }

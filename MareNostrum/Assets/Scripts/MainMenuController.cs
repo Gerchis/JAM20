@@ -74,6 +74,8 @@ public class MainMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+
         masterVolumen = GameObject.Find("MasterVolumeSlider").GetComponent<Slider>();
         musicVolumen = GameObject.Find("MusicVolumeSlider").GetComponent<Slider>();
         effectsVolumen = GameObject.Find("EffectsVolumeSlider").GetComponent<Slider>();
