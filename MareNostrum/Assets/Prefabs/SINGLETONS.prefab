@@ -45,9 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e616b48173b8542a46c25e268cb3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  msToSubstractEnergy: 0
   energySubstract: 0.25
+  energyDash: -5
   playerControl: 0
-  consumeEnergy: 0
+  consumeEnergy: 1
   masterVolumenValueSaved: 1
   musicVolumenValueSaved: 0.75
   effectsVolumenValueSaved: 0.75
@@ -103,13 +105,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: f102525aa0147be408f56c406ffe60ab, type: 3}
     normalizedValue: 0
     type: 0
-    pitch: 1.5
+    pitch: 2
     randomPitch: 0.15
   - name: WaterDash2
     clip: {fileID: 8300000, guid: cbdefbe96807b2944849296d72c0ff44, type: 3}
     normalizedValue: 0
     type: 0
-    pitch: 1.5
+    pitch: 2
     randomPitch: 0.15
   - name: Chew1
     clip: {fileID: 8300000, guid: bd0821f5cf4af1f4488fcaded2e20d38, type: 3}

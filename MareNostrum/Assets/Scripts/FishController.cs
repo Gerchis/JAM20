@@ -13,7 +13,7 @@ public class FishController : MonoBehaviour
     private bool isActive;
 
     //Cuanta energia aporta al jugador
-    public int energyValue;
+    public float energyValue;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +42,7 @@ public class FishController : MonoBehaviour
 
     public void DisableFish()
     {
+        rb.velocity = new Vector2(0, 0);
         GetComponent<SpriteRenderer>().enabled = false;
         GetComponent<CircleCollider2D>().enabled = false;
         isActive = false;
@@ -74,7 +75,7 @@ public class FishController : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             SoundManager.Instance.PlaySound("Chew1");
-            GameManager.Instance.AddEnergy(energyValue);
+            GameManager.Instance.ModifyEnergy(energyValue);
             DisableFish();
         }
     }
