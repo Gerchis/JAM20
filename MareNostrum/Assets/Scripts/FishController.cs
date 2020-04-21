@@ -60,18 +60,21 @@ public class FishController : MonoBehaviour
     {
         if (isActive)
         {
-            timer -= Time.deltaTime;
+            if (fishMovement == FishMovement.TIMER)
+            {
+                timer -= Time.deltaTime;
 
-            if (timer <= negativeTimer && direction == false)
-            {
-                rb.velocity = new Vector2  (-speed, 0);
-                timer = positiveTimer;
-                direction = true;
-            }
-            else if (timer <= 0.0f && direction == true)
-            {
-                rb.velocity = new Vector2(+speed, 0);
-                direction = false;
+                if (timer <= negativeTimer && direction == false)
+                {
+                    rb.velocity = new Vector2(-speed, 0);
+                    timer = positiveTimer;
+                    direction = true;
+                }
+                else if (timer <= 0.0f && direction == true)
+                {
+                    rb.velocity = new Vector2(+speed, 0);
+                    direction = false;
+                }
             }
         }
     }
