@@ -256,6 +256,15 @@ public class PlayerBehav : MonoBehaviour
                     facingDirection = Directions.LEFT;
                 }
 
+                if (!InputManager.Instance.upKey && !InputManager.Instance.downKey && !InputManager.Instance.rightKey && !InputManager.Instance.leftKey)
+                {
+                    anim.SetBool("Idle", true);
+                }
+                else
+                {
+                    anim.SetBool("Idle", false);
+                }
+
                 //!Ejes diagonales para el dash
                 if (InputManager.Instance.rightKey && InputManager.Instance.upKey && facingDirection != Directions.UP_RIGHT)
                 {
