@@ -34,6 +34,7 @@ public class PlayerBehav : MonoBehaviour
 
     public float dashForce;
     private bool isDashing;
+    public float dashBase;
 
     private Rigidbody2D rb;
 
@@ -67,6 +68,7 @@ public class PlayerBehav : MonoBehaviour
         energyDash = GameManager.Instance.energyDash;
         anim = GetComponent<Animator>();
         GameManager.Instance.LoadIngameReferences();
+        dashBase = dashForce;
     }
         
     void Update()

@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1446982141
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b422742ded49c954a8ee27c01fbf1222, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -136,7 +136,8 @@ MonoBehaviour:
   timer: 2
   rb: {fileID: 0}
   speed: 2
-  energyValue: 0
+  fishMovement: 0
+  energyValue: 20
 --- !u!95 &4201142297934073127
 Animator:
   serializedVersion: 3
