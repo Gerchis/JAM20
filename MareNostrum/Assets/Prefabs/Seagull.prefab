@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5dbb4de3e077cee4a832b5bf8f3c3e3d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30d227e6ad58d5846969ec3f6a1e5d52, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   delayRate: 1
   spr: {fileID: 8368150741646121107}
   animator: {fileID: 0}
-  seagullType: 2
+  seagullType: 1
   seagullMovement: 1
 --- !u!95 &147376391799278926
 Animator:
