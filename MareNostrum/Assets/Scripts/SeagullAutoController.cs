@@ -57,7 +57,7 @@ public class SeagullAutoController : MonoBehaviour
         keySeagullAstronaut = Animator.StringToHash("isAstronaut");
         keySeagullAviator = Animator.StringToHash("isAviator");
         keySeagullNormal = Animator.StringToHash("isNormal");
-        GetComponent<Transform>().position = startingPosition.position;
+        
         //Comportamiento
 
         rb = GetComponent<Rigidbody2D>();
@@ -106,15 +106,18 @@ public class SeagullAutoController : MonoBehaviour
 
     public void EnableSeagull()
     {
+        gameObject.transform.position = startingPosition.position;
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<BoxCollider2D>().enabled = true;
         isActive = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DisableSeagull()
     {
-        
+        rb.velocity = new Vector2(0, 0);
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<CircleCollider2D>().enabled = false;
+        isActive = false;
     }
 
     private void FixedUpdate()
