@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3e616b48173b8542a46c25e268cb3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterSelection: 0
   msToSubstractEnergy: 500
   energySubstract: 1
   energyDash: -2
@@ -121,6 +122,18 @@ MonoBehaviour:
     randomPitch: 0.15
   - name: WaterSplash1
     clip: {fileID: 8300000, guid: 7111dc552a96f074e89fa1d0717b494f, type: 3}
+    normalizedValue: 0.25
+    type: 0
+    pitch: 1.5
+    randomPitch: 0.2
+  - name: BubbleImportant
+    clip: {fileID: 8300000, guid: bdebc5bb896e47f4fb81c81e991bd4a8, type: 3}
+    normalizedValue: 0.25
+    type: 0
+    pitch: 1.5
+    randomPitch: 0.2
+  - name: BubbleNormal
+    clip: {fileID: 8300000, guid: a62468330dc5b8d448c276f24eb62807, type: 3}
     normalizedValue: 0.25
     type: 0
     pitch: 1.5

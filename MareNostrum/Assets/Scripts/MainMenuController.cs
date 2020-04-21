@@ -64,6 +64,24 @@ public class MainMenuController : MonoBehaviour
     }
 
     /*index
+      ############
+      #          #
+      #  AUDIO   #
+      #          #
+      ############
+    */
+
+    public void PlaySound(string _name)
+    {
+        SoundManager.Instance.PlaySound(_name);
+    }
+
+    public void PlayRandomSound(string _name)
+    {
+        SoundManager.Instance.PlayRandomSound(_name);
+    }
+
+    /*index
       ######################
       #                    #
       #  FUNCIONES UNITY   #
@@ -74,7 +92,6 @@ public class MainMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
 
         masterVolumen = GameObject.Find("MasterVolumeSlider").GetComponent<Slider>();
         musicVolumen = GameObject.Find("MusicVolumeSlider").GetComponent<Slider>();
