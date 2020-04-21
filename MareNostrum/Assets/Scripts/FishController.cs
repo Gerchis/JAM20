@@ -5,7 +5,9 @@ using UnityEngine;
 public class FishController : MonoBehaviour
 {
     public Transform startingPosition;
+    
     public float timer = 0.5f;
+    private float timerCount;
     private float positiveTimer;
     private float negativeTimer;
     public Rigidbody2D rb;
@@ -29,10 +31,11 @@ public class FishController : MonoBehaviour
         positiveTimer = timer;
         negativeTimer = -timer;
         rb = GetComponent<Rigidbody2D>();
-        EnableFish();
-        GetComponent<Transform>().position = startingPosition.position;
+
         //Por si acaso, configuramos siempre que aporte un minimo de energia si no se configura en el inspector.
         if (energyValue <= 0) { energyValue = 10; }
+
+        EnableFish();
     }
 
     // Update is called once per frame
@@ -43,6 +46,8 @@ public class FishController : MonoBehaviour
 
     public void EnableFish()
     {
+        timerCount = timer;
+        gameObject.transform.position = startingPosition.position;
         GetComponent<SpriteRenderer>().enabled = true;
         GetComponent<CircleCollider2D>().enabled = true;
         isActive = true;
@@ -62,15 +67,15 @@ public class FishController : MonoBehaviour
         {
             if (fishMovement == FishMovement.TIMER)
             {
-                timer -= Time.deltaTime;
+                timerCount -= Time.deltaTime;
 
-                if (timer <= negativeTimer && direction == false)
+                if (timerCount <= negativeTimer && direction == false)
                 {
                     rb.velocity = new Vector2(-speed, 0);
-                    timer = positiveTimer;
+                    timerCount = positiveTimer;
                     direction = true;
                 }
-                else if (timer <= 0.0f && direction == true)
+                else if (timerCount <= 0.0f && direction == true)
                 {
                     rb.velocity = new Vector2(+speed, 0);
                     direction = false;

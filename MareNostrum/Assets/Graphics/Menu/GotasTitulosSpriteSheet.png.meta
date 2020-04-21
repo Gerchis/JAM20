@@ -1,0 +1,603 @@
+fileFormatVersion: 2
+guid: a478f78efcb3b984280d9f8c4b281a43
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: GotasTitulosSpriteSheet_0
+    21300002: GotasTitulosSpriteSheet_1
+    21300004: GotasTitulosSpriteSheet_2
+    21300006: GotasTitulosSpriteSheet_3
+    21300008: GotasTitulosSpriteSheet_4
+    21300010: GotasTitulosSpriteSheet_5
+    21300012: GotasTitulosSpriteSheet_6
+    21300014: GotasTitulosSpriteSheet_7
+    21300016: GotasTitulosSpriteSheet_8
+    21300018: GotasTitulosSpriteSheet_9
+    21300020: GotasTitulosSpriteSheet_10
+    21300022: GotasTitulosSpriteSheet_11
+    21300024: GotasTitulosSpriteSheet_12
+    21300026: GotasTitulosSpriteSheet_13
+    21300028: GotasTitulosSpriteSheet_14
+    21300030: GotasTitulosSpriteSheet_15
+    21300032: GotasTitulosSpriteSheet_16
+    21300034: GotasTitulosSpriteSheet_17
+    21300036: GotasTitulosSpriteSheet_18
+    21300038: GotasTitulosSpriteSheet_19
+    21300040: GotasTitulosSpriteSheet_20
+    21300042: GotasTitulosSpriteSheet_21
+    21300044: GotasTitulosSpriteSheet_22
+    21300046: GotasTitulosSpriteSheet_23
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7918
+        width: 2159
+        height: 1931
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237b8ad64d4a187458abef538c067a6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 7918
+        width: 2168
+        height: 1931
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44316a2e620884446bdefda048912618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 4684
+        y: 8213
+        width: 2126
+        height: 1663
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2e442d2a73a7545bbea70c62f015a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 6498
+        width: 1340
+        height: 1197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ad01747e7788c49abf314476ca0ef6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 2693
+        y: 6520
+        width: 1340
+        height: 1195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f3ce523f4f4344ca7818e0db8cfdfe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 4191
+        y: 6730
+        width: 1404
+        height: 1094
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a066318aeabcd047bc8dc2e0acec5c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 5319
+        width: 1342
+        height: 1159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9632d8677dd0374da5f39ef6560adab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 5345
+        width: 1341
+        height: 1163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3a50a5e55085b4ab6b59cb92396ee5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 4196
+        y: 5507
+        width: 1404
+        height: 1094
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35cc56b685a071542a85e7ef5f11c70c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 4329
+        y: 4610
+        width: 981
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 582aa746c113311438534e350e48cfcb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 3557
+        width: 950
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ede87a5cc4675429155a12db3c153d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 2811
+        y: 3593
+        width: 951
+        height: 849
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b3f0eb1b1380846bfd5bf8594baca1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 4324
+        y: 3665
+        width: 981
+        height: 768
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c4f535eb43fdef4f890bacc9d565258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 2621
+        width: 950
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174c714116bb4384c90215f3716f73c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 2826
+        y: 2612
+        width: 950
+        height: 850
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b80b804fea58cb4fbbc96bac7e11aee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 4290
+        y: 2728
+        width: 985
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbb9be00a474aa4e80c0956e0c6340b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 1351
+        width: 1340
+        height: 1194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8d655153c0c7c44a3faca8e1cdba8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 2619
+        y: 1343
+        width: 1340
+        height: 1197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67af3706c09c53448ad616ba97af144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 4073
+        y: 1501
+        width: 1404
+        height: 1094
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa4201a1b790a94a8a019384240bf63
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 28
+        width: 1339
+        height: 1197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1a9133f9d83154882594b440a3b971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3
+        width: 1339
+        height: 1197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684d6e5a78e0a7b4d82d0a0d0abd1639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 4073
+        y: 131
+        width: 1404
+        height: 1094
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41476fd82d9dcc949b05b4070a1ffed8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 4460
+        width: 1187
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba523f352cc5de146904bfd95d3140b3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotasTitulosSpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 2730
+        y: 4461
+        width: 1247
+        height: 876
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1956545ae0eaf43b1514fad4a0d7ea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 716d85d0f8847414db9c8737c3b792ad
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
