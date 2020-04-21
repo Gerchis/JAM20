@@ -176,6 +176,7 @@ public class SeagullAutoController : MonoBehaviour
 
             if (magnitude1 <= magnitude2 && rb.velocity != Vector2.zero)
             {
+
                 rb.velocity = Vector2.zero;
                 actualDelay = Time.time + delayRate;
                 i++;
@@ -188,6 +189,15 @@ public class SeagullAutoController : MonoBehaviour
             if (i >= positions.Length - 1)
             {
                 going = false;
+            }
+
+            if (positions[i].position.x < positions[i+1].position.x)
+            {
+                spr.flipX = true;
+            }
+            if (positions[i].position.x > positions[i + 1].position.x)
+            {
+                spr.flipX = false;
             }
         }
         else if (!going)
@@ -210,6 +220,15 @@ public class SeagullAutoController : MonoBehaviour
             if (i <= 0)
             {
                 going = true;
+            }
+
+            if (positions[i].position.x < positions[i - 1].position.x)
+            {
+                spr.flipX = true;
+            }
+            if (positions[i].position.x > positions[i - 1].position.x)
+            {
+                spr.flipX = false;
             }
         }
         else if (rb.velocity != Vector2.zero)
