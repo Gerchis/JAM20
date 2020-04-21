@@ -6,12 +6,16 @@ using UnityEngine.UI;
 public class CanvasManager : MonoBehaviour
 {
     private Slider slider;
-    public float energySubstract;
+    private float energySubstract;
+
 
     // Start is called before the first frame update
     void Start()
     {
         slider = GameObject.Find("EnergySlider").GetComponent<Slider>();
+        
+        //Obtenemos la energia a restar. Esto no se modifica durante la partida.
+        energySubstract = GameManager.Instance.energySubstract;
     }
 
     // Update is called once per frame
