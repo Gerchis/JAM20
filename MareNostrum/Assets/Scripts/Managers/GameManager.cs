@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
         #                    #
         ######################
     */
-
    public void LoadScene (int _id)
     {
         SceneManager.LoadScene(_id);
@@ -27,7 +26,7 @@ public class GameManager : MonoBehaviour
         ######################
     */
     private Slider energySlider;
-
+    public float energySubstract;
     public void AddEnergy(int _value)
     {
         energySlider.value += _value;

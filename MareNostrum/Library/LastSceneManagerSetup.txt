@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/Sergio.unity
-=======
-- path: Assets/Scenes/Roger.unity
->>>>>>> 48bca5504067f416dbff11ca3f7be230db76e148
+- path: Assets/Scenes/DevRoom.unity
   isLoaded: 1
   isActive: 1
