@@ -5,6 +5,28 @@ using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
+    /*index
+      #####################
+      #                   #
+      #  CONTROL ESCENA   #
+      #                   #
+      #####################
+    */
+
+    public void playGame(bool mermaid)
+    {
+        if(mermaid)
+        {
+            GameManager.Instance.characterSelection = GameManager.CharacterType.MERMAID;
+        }
+        else
+        {
+            GameManager.Instance.characterSelection = GameManager.CharacterType.TRITON;
+        }
+
+        GameManager.Instance.LoadScene(2);
+
+    }
 
     /*index
       #####################
