@@ -100,7 +100,7 @@ RectTransform:
   m_GameObject: {fileID: 8351736361186387512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.46, y: 0.46, z: 1}
   m_Children:
   - {fileID: 8351736360877750228}
   - {fileID: 8351736362116123810}
@@ -110,7 +110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -113, y: 15}
+  m_AnchoredPosition: {x: -128, y: 144}
   m_SizeDelta: {x: 29.1, y: 409.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8351736361186387510
@@ -494,5 +494,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57243d6ce0fc4141bcc321818bb08ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxTimeMusic: 500
-  fadeoutValue: 0.05
