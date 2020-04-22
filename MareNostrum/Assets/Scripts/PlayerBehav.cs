@@ -184,6 +184,11 @@ public class PlayerBehav : MonoBehaviour
     {
         if (GameManager.Instance.playerControl)
         {
+            if (anim.GetBool("Fall"))
+            {
+                anim.SetBool("Fall", false);
+            }
+
             //!Control de entorno
             switch (environment)
             {
@@ -314,6 +319,14 @@ public class PlayerBehav : MonoBehaviour
         else
         {
             rb.AddForce(Vector2.down * fallingGravity, ForceMode2D.Force);
+
+            if (!anim.GetBool("Fall"))
+            {
+                anim.SetBool("Fall", true);
+                rotationAngle = Quaternion.Euler(0, 0, 90);
+
+                transform.rotation = rotationAngle;
+            }
         }
     }
 }
