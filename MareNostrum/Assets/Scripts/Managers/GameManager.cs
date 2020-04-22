@@ -66,6 +66,8 @@ public class GameManager : MonoBehaviour
     public bool playerControl;
     public bool consumeEnergy;
     public bool playerInSea;
+    public bool seagullHit;
+    public bool stopMeme;
 
 
     /*index

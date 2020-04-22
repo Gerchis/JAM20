@@ -251,6 +251,8 @@ public class SeagullAutoController : MonoBehaviour
             SoundManager.Instance.PlayRandomSound("Seagull");
 
             GameManager.Instance.playerControl = false;
+
+            GameManager.Instance.seagullHit = true; 
         }
     }
 }
