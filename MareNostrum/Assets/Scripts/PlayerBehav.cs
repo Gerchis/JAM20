@@ -76,6 +76,7 @@ public class PlayerBehav : MonoBehaviour
     {
         if (GameManager.Instance.playerControl)
         {
+        
             //!Controlador de la direccion
             switch (facingDirection)
             {
@@ -176,7 +177,20 @@ public class PlayerBehav : MonoBehaviour
                 }
 
                 InputManager.Instance.dashKey = false;
-            } 
+            }
+            //Cheats
+            if (InputManager.Instance.key1 == true)
+            {
+                GetComponent<Transform>().position = cheats[0].position;
+            }
+            else if (InputManager.Instance.key2 == true)
+            {
+                GetComponent<Transform>().position = cheats[1].position;
+            }
+            else if (InputManager.Instance.key3 == true)
+            {
+                GetComponent<Transform>().position = cheats[2].position;
+            }
         }
     }
 

@@ -14,6 +14,9 @@ public class InputManager : MonoBehaviour
     public bool dashKey = false;
 
     public bool key1 = false;
+    public bool key2 = false;
+    public bool key3 = false;
+
     private void Awake()
     {
         if (Instance == null)
@@ -82,6 +85,22 @@ public class InputManager : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Alpha1))
         {
             key1 = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            key2 = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.Alpha2))
+        {
+            key2 = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            key3 = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.Alpha3))
+        {
+            key3 = false;
         }
 
     }
