@@ -190,14 +190,16 @@ public class SeagullAutoController : MonoBehaviour
             {
                 going = false;
             }
-
-            if (positions[i].position.x < positions[i+1].position.x)
+            if (positions.Length < i)
             {
-                spr.flipX = true;
-            }
-            if (positions[i].position.x > positions[i + 1].position.x)
-            {
-                spr.flipX = false;
+                if (positions[i].position.x < positions[i + 1].position.x)
+                {
+                    spr.flipX = true;
+                }
+                if (positions[i].position.x > positions[i + 1].position.x)
+                {
+                    spr.flipX = false;
+                }
             }
         }
         else if (!going)
@@ -222,13 +224,16 @@ public class SeagullAutoController : MonoBehaviour
                 going = true;
             }
 
-            if (positions[i].position.x < positions[i - 1].position.x)
+            if (i > 0)
             {
-                spr.flipX = true;
-            }
-            if (positions[i].position.x > positions[i - 1].position.x)
-            {
-                spr.flipX = false;
+                if (positions[i].position.x < positions[i - 1].position.x)
+                {
+                    spr.flipX = true;
+                }
+                if (positions[i].position.x > positions[i - 1].position.x)
+                {
+                    spr.flipX = false;
+                }
             }
         }
         else if (rb.velocity != Vector2.zero)

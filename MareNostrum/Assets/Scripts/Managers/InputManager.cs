@@ -12,6 +12,8 @@ public class InputManager : MonoBehaviour
     public bool leftKey = false;
 
     public bool dashKey = false;
+
+    public bool key1 = false;
     private void Awake()
     {
         if (Instance == null)
@@ -72,5 +74,15 @@ public class InputManager : MonoBehaviour
         {
             dashKey = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            key1 = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.Alpha1))
+        {
+            key1 = false;
+        }
+
     }
 }

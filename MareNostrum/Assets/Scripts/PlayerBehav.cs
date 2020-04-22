@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerBehav : MonoBehaviour
 {
+    public Transform[] cheats;
     public enum Directions
     {
         NONE,
