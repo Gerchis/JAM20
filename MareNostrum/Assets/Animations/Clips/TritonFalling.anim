@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TritonFrontIdle
+  m_Name: TritonFalling
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,11 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 182144a0f5d49394ba73a0e6e202691b, type: 3}
-    - time: 1
-      value: {fileID: 21300000, guid: 182144a0f5d49394ba73a0e6e202691b, type: 3}
+      value: {fileID: 21300000, guid: 73cc426023418bd488669ea8007acab6, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 4fdc9e0cb39a4684eb62b20383d45dfd, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 15a5162edc4f4174a9149420f4a41c33, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,14 +44,15 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 182144a0f5d49394ba73a0e6e202691b, type: 3}
-    - {fileID: 21300000, guid: 182144a0f5d49394ba73a0e6e202691b, type: 3}
+    - {fileID: 21300000, guid: 73cc426023418bd488669ea8007acab6, type: 3}
+    - {fileID: 21300000, guid: 4fdc9e0cb39a4684eb62b20383d45dfd, type: 3}
+    - {fileID: 21300000, guid: 15a5162edc4f4174a9149420f4a41c33, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.0166667
+    m_StopTime: 0.35000002
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

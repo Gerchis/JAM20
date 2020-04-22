@@ -76,6 +76,7 @@ public class PlayerBehav : MonoBehaviour
     {
         if (GameManager.Instance.playerControl)
         {
+        
             //!Controlador de la direccion
             switch (facingDirection)
             {
@@ -176,7 +177,20 @@ public class PlayerBehav : MonoBehaviour
                 }
 
                 InputManager.Instance.dashKey = false;
-            } 
+            }
+            //Cheats
+            if (InputManager.Instance.key1 == true)
+            {
+                GetComponent<Transform>().position = cheats[0].position;
+            }
+            else if (InputManager.Instance.key2 == true)
+            {
+                GetComponent<Transform>().position = cheats[1].position;
+            }
+            else if (InputManager.Instance.key3 == true)
+            {
+                GetComponent<Transform>().position = cheats[2].position;
+            }
         }
     }
 
@@ -184,6 +198,11 @@ public class PlayerBehav : MonoBehaviour
     {
         if (GameManager.Instance.playerControl)
         {
+            if (anim.GetBool("Fall"))
+            {
+                anim.SetBool("Fall", false);
+            }
+
             //!Control de entorno
             switch (environment)
             {
@@ -314,6 +333,14 @@ public class PlayerBehav : MonoBehaviour
         else
         {
             rb.AddForce(Vector2.down * fallingGravity, ForceMode2D.Force);
+
+            if (!anim.GetBool("Fall"))
+            {
+                anim.SetBool("Fall", true);
+                rotationAngle = Quaternion.Euler(0, 0, 90);
+
+                transform.rotation = rotationAngle;
+            }
         }
     }
 }
