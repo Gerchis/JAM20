@@ -228,7 +228,7 @@ PrefabInstance:
     - target: {fileID: 3112813480079801680, guid: b622704c1fed91a4a91e8ac49c04ad09,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3112813480079801680, guid: b622704c1fed91a4a91e8ac49c04ad09,
         type: 3}
@@ -250,9 +250,24 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3112813480079801681, guid: b622704c1fed91a4a91e8ac49c04ad09,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112813480079801681, guid: b622704c1fed91a4a91e8ac49c04ad09,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3112813480079801681, guid: b622704c1fed91a4a91e8ac49c04ad09,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.05882353
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b622704c1fed91a4a91e8ac49c04ad09, type: 3}
---- !u!1 &1067368007
+--- !u!1 &1118466250
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,41 +275,82 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1067368009}
-  - component: {fileID: 1067368008}
+  - component: {fileID: 1118466252}
+  - component: {fileID: 1118466251}
+  - component: {fileID: 1118466253}
   m_Layer: 0
-  m_Name: SplashScreenController
+  m_Name: Video Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1067368008
-MonoBehaviour:
+--- !u!328 &1118466251
+VideoPlayer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067368007}
+  m_GameObject: {fileID: 1118466250}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e202172a4c0e1c64b84ec67cd973c283, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1067368009
+  m_VideoClip: {fileID: 32900000, guid: 86c928ad85dd49d4285eac4c13401ab9, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 1273494966}
+  m_TargetTexture: {fileID: 0}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 0
+  m_AspectRatio: 1
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 0.5
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+--- !u!4 &1118466252
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1067368007}
+  m_GameObject: {fileID: 1118466250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.6123204, y: -0.37209508, z: 0.16747817}
+  m_LocalPosition: {x: 1.6562566, y: 2.971693, z: 2.586472}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1118466253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118466250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e202172a4c0e1c64b84ec67cd973c283, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!20 &1273494966 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3112813480079801681, guid: b622704c1fed91a4a91e8ac49c04ad09,
+    type: 3}
+  m_PrefabInstance: {fileID: 346544988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1689366366
 PrefabInstance:
   m_ObjectHideFlags: 0
