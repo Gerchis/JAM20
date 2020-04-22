@@ -38,10 +38,10 @@ public class GameManager : MonoBehaviour
         switch (Resolution)
         {
             case 1:
-            Screen.SetResolution(225, 450, false);
+            Screen.SetResolution(240, 426, false);
             break;
             case 2:
-            Screen.SetResolution(450, 900, false);
+            Screen.SetResolution(450, 800, false);
             break;
             case 3:
             Screen.SetResolution(900, 1600, false);
