@@ -139,7 +139,6 @@ public class SoundManager : MonoBehaviour
 
         //Obtenemos un número random del array int
         int random = Random.Range(0, _ids.Length);
-        Debug.Log(random);
 
         //Reproducimos el audio seleccionado
         sounds[_ids[random]].Play();

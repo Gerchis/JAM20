@@ -81,6 +81,7 @@ public class StartTrigger : MonoBehaviour
             GameManager.Instance.consumeEnergy = true;
             RegenerateEnergy = false;
             GameManager.Instance.playerInSea = false;
+            GameManager.Instance.stopMeme = true;
         }
     }
 }
