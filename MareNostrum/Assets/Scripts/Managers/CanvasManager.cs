@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class CanvasManager : MonoBehaviour
 {
+
+    //TODO: PENDIENTE REVISAR TODO LA PARTE DE AUDIO DE ESTE SCRIPT, ESTE CODIGO ES PRODUCTO DE LA RECTA FINAL DONDE PREMIA EL FUNCIONAMIENTO DEL CODIGO ANTES QUE CUALQUIER OTRA COSA
+
     private Slider slider;
     private float energySubstract = 0;
 
@@ -22,6 +25,8 @@ public class CanvasManager : MonoBehaviour
     private float anticipation1Norm;
     private float anticipation2Norm;
     private float memefallNorm;
+
+    private float memefallInitVol;
 
     public void RestartMemeSong()
     {
@@ -89,7 +94,7 @@ public class CanvasManager : MonoBehaviour
         SetVolumen(anticipation1, anticipation1Norm, false);
         SetVolumen(anticipation2, anticipation2Norm, false);
         SetVolumen(memefall, memefallNorm, true);
-
+        memefallInitVol = memefall.volume;
     }
 
     // Update is called once per frame
@@ -133,11 +138,10 @@ public class CanvasManager : MonoBehaviour
             }
             else if (!GameManager.Instance.playerControl && !memefall.isPlaying)
             {
-                //TODO: EJECUTAR CANCION DESPUES DE QUE SUENE PAJARO
                 
-
                 anticipation1.Stop();
                 anticipation2.Stop();
+                
                 if(!GameManager.Instance.seagullHit)
                 {
                     memefall.Play();
@@ -152,7 +156,7 @@ public class CanvasManager : MonoBehaviour
             
             if(GameManager.Instance.stopMeme)
             {
-                fadeoutValue = fadeoutValue * 5;
+                fadeoutValue = fadeoutValue * 3;
                 GameManager.Instance.stopMeme = false;
             }
 
@@ -205,6 +209,7 @@ public class CanvasManager : MonoBehaviour
         {
             FadeOutMusic = false;
             fadeoutValue = initValue;
+            memefall.volume = memefallInitVol;
         }
         
 

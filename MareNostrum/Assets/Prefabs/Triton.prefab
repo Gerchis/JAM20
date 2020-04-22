@@ -122,8 +122,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 5
-  m_AngularDrag: 5
+  m_LinearDrag: 10
+  m_AngularDrag: 10
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -142,11 +142,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2798dfe23c8cd584b8430914d0e3cb5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cheats: []
   characterType: 2
   moveForce: 30
-  maxVel: 4
+  maxVel: 5
   rotationVel: 15
-  dashForce: 30
+  dashForce: 25
+  dashBase: 25
   airGravity: 50
   waterGravity: 5
   fallingGravity: 80
