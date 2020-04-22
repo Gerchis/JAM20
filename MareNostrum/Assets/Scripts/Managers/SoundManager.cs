@@ -50,14 +50,14 @@ public class Audios
 
 
         //Seteamos volumen del sonido
-        Debug.LogWarning(name);
-        Debug.Log("volume master: " + GameManager.Instance.masterVolumenValueSaved);
-        Debug.Log("volume normalized: " + normalizedValue);
-        Debug.Log("volume effects: " + GameManager.Instance.effectsVolumenValueSaved);
+        //Debug.LogWarning(name);
+        //Debug.Log("volume master: " + GameManager.Instance.masterVolumenValueSaved);
+        //Debug.Log("volume normalized: " + normalizedValue);
+        //Debug.Log("volume effects: " + GameManager.Instance.effectsVolumenValueSaved);
 
         source.volume = GameManager.Instance.masterVolumenValueSaved - normalizedValue;
         
-        Debug.Log("volume after maste/normalized: " + source.volume);
+        //Debug.Log("volume after maste/normalized: " + source.volume);
 
         switch (type)
         {
@@ -72,7 +72,7 @@ public class Audios
             break;
         }
         
-        Debug.Log("volume post effects/normalized: " + source.volume);
+        //Debug.Log("volume post effects/normalized: " + source.volume);
 
 
         //Si randomPitch=0, pitch queda sin modificar
@@ -184,7 +184,6 @@ public class SoundManager : MonoBehaviour
         {
             if (musics[i].name == _name)
             {
-                if (musics[i].isPlaying()) { return; }
                 musics[i].Play();
                 actualMusic = musics[i].getSource();
                 return;
@@ -197,6 +196,7 @@ public class SoundManager : MonoBehaviour
     //Función para parar la música.
     public void StopMusic()
     {
+        Debug.Log("Stoping" + actualMusic.name);
         actualMusic.Stop();
         return;
     }

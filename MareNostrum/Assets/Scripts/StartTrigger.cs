@@ -69,6 +69,7 @@ public class StartTrigger : MonoBehaviour
             RegenerateEnergy = true;
             GameManager.Instance.consumeEnergy = false;
             GameManager.Instance.playerControl = true;
+            GameManager.Instance.playerInSea = true;
         }
     }
 
@@ -79,6 +80,7 @@ public class StartTrigger : MonoBehaviour
         {
             GameManager.Instance.consumeEnergy = true;
             RegenerateEnergy = false;
+            GameManager.Instance.playerInSea = false;
         }
     }
 }

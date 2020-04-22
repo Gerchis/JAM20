@@ -110,7 +110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -388, y: 360}
+  m_AnchoredPosition: {x: -113, y: 15}
   m_SizeDelta: {x: 29.1, y: 409.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8351736361186387510
@@ -494,3 +494,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c57243d6ce0fc4141bcc321818bb08ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxTimeMusic: 500
+  fadeoutValue: 0.05

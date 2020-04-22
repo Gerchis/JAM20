@@ -51,6 +51,7 @@ MonoBehaviour:
   energyDash: -2
   playerControl: 0
   consumeEnergy: 1
+  playerInSea: 0
   masterVolumenValueSaved: 1
   musicVolumenValueSaved: 0.75
   effectsVolumenValueSaved: 0.75
@@ -147,25 +148,25 @@ MonoBehaviour:
     randomPitch: 0
   - name: Ingame
     clip: {fileID: 8300000, guid: 6afcdf04965e2ac479a1e211d167c864, type: 3}
-    normalizedValue: -0.5
+    normalizedValue: 0.5
     type: 1
     pitch: 1
     randomPitch: 0
   - name: Anticipation1
     clip: {fileID: 8300000, guid: 6489cd614f0fa234489db5f516126065, type: 3}
-    normalizedValue: -0.5
+    normalizedValue: 0
     type: 1
     pitch: 1
     randomPitch: 0
   - name: Anticipation2
     clip: {fileID: 8300000, guid: 3511ce93a63f72b4bbed8c18190614a2, type: 3}
-    normalizedValue: -0.5
+    normalizedValue: 0.6
     type: 1
     pitch: 1
     randomPitch: 0
   - name: MemeFall
-    clip: {fileID: 8300000, guid: 6eeca87ad59418b48886a77d8ca3dfe9, type: 3}
-    normalizedValue: -0.5
+    clip: {fileID: 8300000, guid: 6af393bc787896a4f8e93725bd7316e2, type: 3}
+    normalizedValue: 0.7
     type: 1
     pitch: 1
     randomPitch: 0
