@@ -122,39 +122,60 @@ public class CanvasManager : MonoBehaviour
 
         if(!GameManager.Instance.playerInSea)
         {
-            if (slider.value <= 50 && !anticipation1.isPlaying)
+            if (slider.value <= 50 && !anticipation1.isPlaying && !anticipation2.isPlaying)
             {
+                
                 anticipation1.Play();
                 anticipation2.Stop();
                 memefall.Stop();
                 anticipation1Played = true;
             }
-            else if (slider.value <= 25 && !anticipation2.isPlaying)
+            else if (slider.value > 0 && slider.value <= 25 && !anticipation2.isPlaying && !memefall.isPlaying)
             {
                 anticipation1.Stop();
                 anticipation2.Play();
                 memefall.Stop();
                 anticipation2Played = true;
             }
-            else if (!GameManager.Instance.playerControl && !memefall.isPlaying)
+
+
+            if (!GameManager.Instance.playerControl && !memefall.isPlaying)
             {
-                
                 anticipation1.Stop();
                 anticipation2.Stop();
-                
-                if(!GameManager.Instance.seagullHit)
+                if (!GameManager.Instance.seagullHit)
                 {
-                    memefall.Play();
+                    //memefall.Play();
                 }
                 else
                 {
                     seagullHit = true;
                 }
-                memefallPlayed = true;
             }
+            //else if (!GameManager.Instance.playerControl && !memefall.isPlaying)
+            //{
 
-            
-            if(GameManager.Instance.stopMeme)
+            //    anticipation1.Stop();
+            //    anticipation2.Stop();
+
+            //    if(!memefallPlayed)
+            //    {
+            //        if (!GameManager.Instance.seagullHit)
+            //        {
+            //            memefall.Play();
+            //        }
+            //        else
+            //        {
+            //            seagullHit = true;
+            //        }
+            //        memefallPlayed = true;
+            //    }
+
+
+            //}
+
+
+            if (GameManager.Instance.stopMeme)
             {
                 fadeoutValue = fadeoutValue * 3;
                 GameManager.Instance.stopMeme = false;
