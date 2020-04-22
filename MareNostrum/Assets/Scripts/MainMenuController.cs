@@ -33,6 +33,11 @@ public class MainMenuController : MonoBehaviour
 
     }
 
+    public void SetResolution(int i)
+    {
+        GameManager.Instance.SetResolution(i);
+    }
+
     /*index
       #####################
       #                   #

@@ -33,6 +33,28 @@ public class GameManager : MonoBehaviour
         energySlider = GameObject.Find("EnergySlider").GetComponent<Slider>();
     }
 
+    public void ApplyResolution()
+    {
+        switch (Resolution)
+        {
+            case 1:
+            Screen.SetResolution(225, 450, false);
+            break;
+            case 2:
+            Screen.SetResolution(450, 900, false);
+            break;
+            case 3:
+            Screen.SetResolution(900, 1600, false);
+            break;
+        }
+    }
+
+    public void SetResolution(int i)
+    {
+        Resolution = i;
+        ApplyResolution();
+    }
+
     /*index
         ######################
         #                    #
@@ -68,6 +90,7 @@ public class GameManager : MonoBehaviour
     public bool playerInSea;
     public bool seagullHit;
     public bool stopMeme;
+    public int Resolution;
 
 
     /*index
@@ -121,6 +144,7 @@ public class GameManager : MonoBehaviour
         //Habilitamos el control del personaje. Pasa a false cuando se queda sin energia y cae.
         playerControl = true;
         consumeEnergy = false;
+        Resolution = 2;
 
         //TESTING ZONE
         //TESTING END ZONE

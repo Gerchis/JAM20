@@ -6,6 +6,6 @@ public class ForceScreen : MonoBehaviour
 {
     private void Awake()
     {
-        Screen.SetResolution(450, 900, false);
+        GameManager.Instance.ApplyResolution();
     }
 }
